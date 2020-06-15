@@ -1,15 +1,20 @@
 // @flow strict
 import React from 'react';
-import styles from './Copyright.module.scss';
+import styled from 'styled-components';
+
+const StyledCopyright = styled.div`
+  color: var(--color-gray500);
+  font-size: ${(props) => props.theme.fontSizes.small}px;
+`;
 
 type Props = {
   copyright: string
 };
 
 const Copyright = ({ copyright }: Props) => (
-  <div className={styles['copyright']}>
+  <StyledCopyright>
     {copyright}
-  </div>
+  </StyledCopyright>
 );
 
 export default Copyright;

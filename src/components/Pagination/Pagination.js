@@ -1,9 +1,40 @@
 // @flow strict
 import React from 'react';
-import classNames from 'classnames/bind';
 import { Link } from 'gatsby';
+import styled, { css } from 'styled-components';
 import { PAGINATION } from '../../constants';
-import styles from './Pagination.module.scss';
+import { marginTop } from '../../utils/get-margin';
+
+const StyledPagination = styled.div`
+  display: flex;
+  ${marginTop(2)}
+`;
+
+const Container = styled.div`
+  width: 50%;
+`;
+
+const Previous = styled(Container)`
+  text-align: left;
+`;
+
+const Next = styled(Container)`
+  text-align: right;
+`;
+
+const StyledLink = styled(Link)`
+  color: var(--color-secondary);
+  font-size: 26px;
+  font-weight: bold;
+  &:hover,
+  &:focus {
+    color: var(--color-primary);
+  }
+  ${(props) => props.disabled && css`
+  pointer-events: none;
+  color: var(--color-gray700);
+  `}
+`;
 
 type Props = {
   prevPagePath: string,
@@ -12,34 +43,20 @@ type Props = {
   hasPrevPage: boolean
 };
 
-const cx = classNames.bind(styles);
-
 const Pagination = ({
   prevPagePath,
   nextPagePath,
   hasNextPage,
   hasPrevPage
-}: Props) => {
-  const prevClassName = cx({
-    'pagination__prev-link': true,
-    'pagination__prev-link--disable': !hasPrevPage
-  });
-
-  const nextClassName = cx({
-    'pagination__next-link': true,
-    'pagination__next-link--disable': !hasNextPage
-  });
-
-  return (
-    <div className={styles['pagination']}>
-      <div className={styles['pagination__prev']}>
-        <Link rel="prev" to={hasPrevPage ? prevPagePath : '/'} className={prevClassName}>{PAGINATION.PREV_PAGE}</Link>
-      </div>
-      <div className={styles['pagination__next']}>
-        <Link rel="next" to={hasNextPage ? nextPagePath : '/'} className={nextClassName}>{PAGINATION.NEXT_PAGE}</Link>
-      </div>
-    </div>
-  );
-};
+}: Props) => (
+  <StyledPagination>
+    <Previous>
+      <StyledLink rel="prev" to={hasPrevPage ? prevPagePath : '/'} disabled={!hasPrevPage}>{PAGINATION.PREV_PAGE}</StyledLink>
+    </Previous>
+    <Next>
+      <StyledLink rel="next" to={hasNextPage ? nextPagePath : '/'} disabled={!hasNextPage}>{PAGINATION.NEXT_PAGE}</StyledLink>
+    </Next>
+  </StyledPagination>
+);
 
 export default Pagination;

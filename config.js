@@ -1,15 +1,16 @@
 'use strict';
 
+// TODO Covert to site metadata
+
 module.exports = {
   url: 'https://vorote.ch',
   pathPrefix: '/',
   title: 'Blog by Dmytro Vorotyntsev',
-  subtitle: 'DevOps Transformation From Zero to Hero.',
-  copyright: '© All blog posts and pages content is licensed under a CC BY 4.0 License.',
+  subtitle: 'DevOps Transformation From Zero to Hero',
+  copyright: '© Licensed under a CC BY 4.0 License.',
   disqusShortname: '',
   postsPerPage: 4,
   googleAnalyticsId: '',
-  useKatex: false,
   menu: [
     {
       label: 'Articles',
@@ -33,10 +34,10 @@ module.exports = {
       facebook: '',
       telegram: 'vorotech',
       twitter: 'vorotech',
-      github: 'vorotech/',
+      github: 'vorotech',
       rss: '',
       vkontakte: '',
-      linkedin: 'vorotech/',
+      linkedin: 'vorotech',
       instagram: 'vorotech',
       line: '',
       gitlab: '',

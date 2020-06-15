@@ -1,14 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pagination renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 52px;
+}
+
+.c1 {
+  width: 50%;
+  text-align: left;
+}
+
+.c3 {
+  width: 50%;
+  text-align: right;
+}
+
+.c2 {
+  color: var(--color-secondary);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.c2:hover,
+.c2:focus {
+  color: var(--color-primary);
+}
+
 <div
-  className="pagination"
+  className="c0"
 >
   <div
-    className="pagination__prev"
+    className="sc-AxirZ c1"
   >
     <a
-      className="pagination__prev-link"
+      className="c2"
+      disabled={false}
       href="/page/1"
       rel="prev"
     >
@@ -16,10 +46,11 @@ exports[`Pagination renders correctly 1`] = `
     </a>
   </div>
   <div
-    className="pagination__next"
+    className="sc-AxirZ c3"
   >
     <a
-      className="pagination__next-link"
+      className="c2"
+      disabled={false}
       href="/page/3"
       rel="next"
     >

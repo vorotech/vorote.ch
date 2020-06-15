@@ -1,3 +1,4 @@
-'use strict';
+import wrapWithProvider from './src/gatsbyapis/wrap-with-provider';
 
-exports.onRenderBody = require('./gatsby/on-render-body.js');
+/* eslint-disable import/prefer-default-export */
+export const wrapRootElement = wrapWithProvider;

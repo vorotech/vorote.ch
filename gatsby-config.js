@@ -1,7 +1,6 @@
 'use strict';
 
 const siteConfig = require('./config.js');
-const postCssPlugins = require('./postcss-config.js');
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
@@ -104,12 +103,6 @@ module.exports = {
         plugins: [
           'gatsby-remark-relative-images',
           {
-            resolve: 'gatsby-remark-katex',
-            options: {
-              strict: 'ignore'
-            }
-          },
-          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 960,
@@ -193,16 +186,9 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        postCssPlugins: [...postCssPlugins],
-        cssLoaderOptions: {
-          camelCase: false,
-        }
-      }
-    },
     'gatsby-plugin-flow',
     'gatsby-plugin-optimize-svgs',
+    'gatsby-plugin-dark-mode',
+    'gatsby-plugin-styled-components'
   ]
 };

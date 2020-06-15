@@ -1,9 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout renders correctly 1`] = `
+.c1 {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:62em) {
+  .c1 {
+    -webkit-flex-basis: 83.3333%;
+    -ms-flex-preferred-size: 83.3333%;
+    flex-basis: 83.3333%;
+    max-width: 83.3333%;
+  }
+}
+
 <div
-  className="layout"
+  className="c0"
 >
-  test
+  <div
+    className="c1"
+    size={
+      Object {
+        "lg": 0.8333333333333334,
+      }
+    }
+  >
+    <div
+      className="c2"
+    >
+      test
+    </div>
+  </div>
 </div>
 `;

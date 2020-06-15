@@ -7,6 +7,8 @@ import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
 import pageContext from '../../jest/__fixtures__/page-context';
 import type { RenderCallback } from '../types';
+import 'jest-styled-components';
+import Theme from '../components/Theme';
 
 describe('TagTemplate', () => {
   beforeEach(() => {
@@ -26,7 +28,11 @@ describe('TagTemplate', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<TagTemplate {...props} />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <TagTemplate {...props} />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

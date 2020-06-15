@@ -1,19 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Page renders correctly 1`] = `
+.c0 {
+  margin-bottom: 52px;
+  box-sizing: border-box;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  padding: 25px 20px;
+}
+
+.c2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 3.25em;
+  margin-top: 0px;
+  margin-bottom: 37.699999999999996px;
+}
+
+.c3 {
+  font-size: 16px;
+  line-height: 1.625em;
+  margin: 0px 0px 26px;
+}
+
+@media (min-width:36em) {
+  .c0 {
+    -webkit-flex-basis: 58.3333%;
+    -ms-flex-preferred-size: 58.3333%;
+    flex-basis: 58.3333%;
+    max-width: 58.3333%;
+  }
+}
+
+@media (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 66.6667%;
+    -ms-flex-preferred-size: 66.6667%;
+    flex-basis: 66.6667%;
+    max-width: 66.6667%;
+  }
+}
+
+@media screen and (min-width:36em) {
+  .c1 {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c1 {
+    padding: 40px 35px;
+  }
+}
+
 <div
-  className="page"
+  className="c0"
 >
   <div
-    className="page__inner"
+    className="c1"
   >
     <h1
-      className="page__title"
+      className="c2"
     >
       test
     </h1>
     <div
-      className="page__body"
+      className="c3"
     >
       test
     </div>

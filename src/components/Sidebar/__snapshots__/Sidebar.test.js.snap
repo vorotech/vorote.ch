@@ -1,73 +1,287 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar renders correctly 1`] = `
+.c2 {
+  display: inline-block;
+  margin-bottom: 0;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+.c3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.828125em;
+  margin: 13px 0px;
+}
+
+.c4 {
+  color: var(--color-text);
+}
+
+.c4:hover,
+.c4:focus {
+  color: var(--color-text);
+}
+
+.c5 {
+  color: var(--color-gray500);
+  line-height: 1.625em;
+  margin-bottom: 26px;
+}
+
+.c14 {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c10 {
+  margin-bottom: 26px;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  list-style: none;
+  padding: 0;
+  margin: 10px -3px;
+  width: 140px;
+}
+
+.c12 {
+  padding: 0;
+  margin: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  line-height: 1.625em;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid var(--color-gray300);
+}
+
+.c13 {
+  border: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--color-text);
+}
+
+.c13:hover,
+.c13:focus {
+  color: var(--color-primary);
+}
+
+.c15 {
+  color: var(--color-gray500);
+  font-size: 14px;
+}
+
+.c6 {
+  margin-bottom: 26px;
+}
+
+.c7 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c8 {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.c9 {
+  font-size: 16px;
+  color: var(--color-text);
+  font-weight: normal;
+  border: 0;
+}
+
+.c9:hover,
+.c9:focus {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.c9:.active {
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+}
+
+.c0 {
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 25px 20px 0;
+}
+
+@media (min-width:36em) {
+  .c0 {
+    -webkit-flex-basis: 41.6667%;
+    -ms-flex-preferred-size: 41.6667%;
+    flex-basis: 41.6667%;
+    max-width: 41.6667%;
+  }
+}
+
+@media (min-width:48em) {
+  .c0 {
+    -webkit-flex-basis: 33.3333%;
+    -ms-flex-preferred-size: 33.3333%;
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media screen and (min-width:36em) {
+  .c1 {
+    padding: 30px 20px 0;
+  }
+
+  .c1:after {
+    background: var(--color-gray500);
+    background: linear-gradient(to bottom,var(--color-gray500) 0%,var(--color-gray500) 48%,var(--color-background) 100%);
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 540px;
+    top: 30px;
+    right: -10px;
+    bottom: 0;
+  }
+}
+
 <div
-  className="sidebar"
+  className="c0"
 >
   <div
-    className="sidebar__inner"
+    className="c1"
   >
-    <div
-      className="author"
-    >
+    <div>
       <a
         href="/"
       >
         <img
           alt="Test name"
-          className="author__photo"
+          className="c2"
           height="75"
           src="/test.jpg"
           width="75"
         />
       </a>
       <h1
-        className="author__title"
+        className="c3"
       >
         <a
-          className="author__title-link"
+          className="c4"
           href="/"
         >
           Test name
         </a>
       </h1>
       <p
-        className="author__subtitle"
+        className="c5"
       >
         Test bio
       </p>
     </div>
+    <button
+      aria-checked={false}
+      className="rc-switch"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="switch"
+      type="button"
+    >
+      <span
+        className="rc-switch-inner"
+      >
+        🌙
+      </span>
+    </button>
     <nav
-      className="menu"
+      className="c6"
     >
       <ul
-        className="menu__list"
+        className="c7"
       >
         <li
-          className="menu__list-item"
+          className="c8"
         >
           <a
-            className="menu__list-item-link"
+            className="c9"
             href="/test/1/"
           >
             Test label 1
           </a>
         </li>
         <li
-          className="menu__list-item"
+          className="c8"
         >
           <a
-            className="menu__list-item-link"
+            className="c9"
             href="/test/2/"
           >
             Test label 2
           </a>
         </li>
         <li
-          className="menu__list-item"
+          className="c8"
         >
           <a
-            className="menu__list-item-link"
+            className="c9"
             href="/test/3/"
           >
             Test label 3
@@ -76,22 +290,22 @@ exports[`Sidebar renders correctly 1`] = `
       </ul>
     </nav>
     <div
-      className="contacts"
+      className="c10"
     >
       <ul
-        className="contacts__list"
+        className="c11"
       >
         <li
-          className="contacts__list-item"
+          className="c12"
         >
           <a
-            className="contacts__list-item-link"
+            className="c13"
             href="mailto:#"
             rel="noopener noreferrer"
             target="_blank"
           >
             <svg
-              className="icon"
+              className="c14"
               viewBox="0 0 28 28"
             >
               <title>
@@ -104,16 +318,16 @@ exports[`Sidebar renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="contacts__list-item"
+          className="c12"
         >
           <a
-            className="contacts__list-item-link"
+            className="c13"
             href="https://t.me/#"
             rel="noopener noreferrer"
             target="_blank"
           >
             <svg
-              className="icon"
+              className="c14"
               viewBox="0 0 28 28"
             >
               <title>
@@ -126,16 +340,16 @@ exports[`Sidebar renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="contacts__list-item"
+          className="c12"
         >
           <a
-            className="contacts__list-item-link"
+            className="c13"
             href="https://www.twitter.com/#"
             rel="noopener noreferrer"
             target="_blank"
           >
             <svg
-              className="icon"
+              className="c14"
               viewBox="0 0 26 28"
             >
               <title>
@@ -148,16 +362,16 @@ exports[`Sidebar renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="contacts__list-item"
+          className="c12"
         >
           <a
-            className="contacts__list-item-link"
+            className="c13"
             href="https://github.com/#"
             rel="noopener noreferrer"
             target="_blank"
           >
             <svg
-              className="icon"
+              className="c14"
               viewBox="0 0 26 28"
             >
               <title>
@@ -170,16 +384,16 @@ exports[`Sidebar renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="contacts__list-item"
+          className="c12"
         >
           <a
-            className="contacts__list-item-link"
+            className="c13"
             href="#"
             rel="noopener noreferrer"
             target="_blank"
           >
             <svg
-              className="icon"
+              className="c14"
               viewBox="0 0 22 28"
             >
               <title>
@@ -192,16 +406,16 @@ exports[`Sidebar renders correctly 1`] = `
           </a>
         </li>
         <li
-          className="contacts__list-item"
+          className="c12"
         >
           <a
-            className="contacts__list-item-link"
+            className="c13"
             href="https://vk.com/#"
             rel="noopener noreferrer"
             target="_blank"
           >
             <svg
-              className="icon"
+              className="c14"
               viewBox="0 0 31 28"
             >
               <title>
@@ -216,7 +430,7 @@ exports[`Sidebar renders correctly 1`] = `
       </ul>
     </div>
     <div
-      className="copyright"
+      className="c15"
     >
       Test copyright
     </div>

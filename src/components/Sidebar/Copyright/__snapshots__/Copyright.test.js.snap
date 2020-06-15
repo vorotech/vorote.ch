@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Copyright renders correctly 1`] = `
+.c0 {
+  color: var(--color-gray500);
+  font-size: 14px;
+}
+
 <div
-  className="copyright"
+  className="c0"
 >
   copyright
 </div>

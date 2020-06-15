@@ -1,0 +1,8 @@
+const SCREEN_SIZES = {
+  LARGE_DESKTOP: 1200,
+  DESKTOP: 992,
+  TABLET: 768,
+  LANDSCAPE_PHONE: 576
+};
+
+export default SCREEN_SIZES;

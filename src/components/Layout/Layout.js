@@ -2,15 +2,20 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { withPrefix } from 'gatsby';
+import styled from 'styled-components';
+import Grid, { grid } from 'styled-components-grid';
 import type { Node as ReactNode } from 'react';
 import { useSiteMetadata } from '../../hooks';
-import styles from './Layout.module.scss';
+
+const StyledLayout = styled.div`
+ ${grid({ halign: 'justify-center' })}
+`;
 
 type Props = {
   children: ReactNode,
   title: string,
   description?: string,
-  socialImage? :string
+  socialImage?: string
 };
 
 const Layout = ({
@@ -24,7 +29,7 @@ const Layout = ({
   const metaImageUrl = url + withPrefix(metaImage);
 
   return (
-    <div className={styles.layout}>
+    <StyledLayout>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -36,8 +41,12 @@ const Layout = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-      {children}
-    </div>
+      <Grid.Unit size={{ lg: 10 / 12 }}>
+        <Grid>
+          {children}
+        </Grid>
+      </Grid.Unit>
+    </StyledLayout>
   );
 };
 

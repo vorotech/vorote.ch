@@ -4,7 +4,7 @@ This is a Git repo of Dmytro Vorotyntsev personal [blog](https://vorote.ch). It 
 All blog posts and pages content is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
 ## Features
-+ [Lost Grid](http://lostgrid.org).
++ [Styled Components Grid](https://github.com/jameslnewell/styled-components-grid).
 + [Modern font stack](https://bitsofco.de/the-new-system-font-stack).
 + Beautiful typography inspired by [matejlatin/Gutenberg](https://github.com/matejlatin/Gutenberg).
 + Syntax highlighting in code blocks using [PrismJS](http://prismjs.com).
@@ -12,6 +12,7 @@ All blog posts and pages content is licensed under a [Creative Commons Attributi
 + Archive organized by tags and categories.
 + Pagination support.
 + [Netlify CMS](https://www.netlifycms.org) support.
++ Color mode toggler.
 + Google Analytics.
 + Disqus Comments.
 + [Flow](https://flow.org/) static type checking.
@@ -53,30 +54,30 @@ Open the `blog` directory in your code editor of choice and edit `src/templates/
     ├── admin
     └── media
 └── src
-    ├── assets
-    │   └── scss
-    │       ├── base
-    │       └── mixins
     ├── cms
     │   └── preview-templates
     ├── components
     │   ├── Feed
+    |   ├── GlobalStyles
     │   ├── Icon
     │   ├── Layout
     │   ├── Page
     │   ├── Pagination
     │   ├── Post
     │   │   ├── Author
+    │   │   ├── ColorModeToggler
     │   │   ├── Comments
     │   │   ├── Content
     │   │   ├── Meta
     │   │   └── Tags
-    │   └── Sidebar
-    │       ├── Author
-    │       ├── Contacts
-    │       ├── Copyright
-    │       └── Menu
+    │   ├── Sidebar
+    │   │   ├── Author
+    │   │   ├── Contacts
+    │   │   ├── Copyright
+    │   │   └── Menu
+    |   └── Theme
     ├── constants
+    ├── gatsbyapis
     ├── templates
     └── utils
 

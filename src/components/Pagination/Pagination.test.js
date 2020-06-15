@@ -2,6 +2,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Pagination from './Pagination';
+import 'jest-styled-components';
+import Theme from '../Theme';
 
 describe('Pagination', () => {
   const props = {
@@ -12,7 +14,11 @@ describe('Pagination', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Pagination {...props} />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <Pagination {...props} />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

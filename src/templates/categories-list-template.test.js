@@ -6,6 +6,8 @@ import CategoriesListTemplate from './categories-list-template';
 import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
 import type { RenderCallback } from '../types';
+import 'jest-styled-components';
+import Theme from '../components/Theme';
 
 describe('CategoriesListTemplate', () => {
   const props = {
@@ -23,7 +25,11 @@ describe('CategoriesListTemplate', () => {
   });
 
   it('renders correctly', () => {
-    const tree = renderer.create(<CategoriesListTemplate />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <CategoriesListTemplate />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
