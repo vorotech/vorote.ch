@@ -5,7 +5,7 @@ import { useStaticQuery, StaticQuery } from 'gatsby';
 import Post from './Post';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import type { RenderCallback } from '../../types';
-import 'jest-styled-components'
+import 'jest-styled-components';
 import Theme from '../Theme';
 
 describe('Post', () => {

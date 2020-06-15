@@ -1,8 +1,8 @@
 // @flow strict
 import React from 'react';
+import styled from 'styled-components';
 import { getContactHref, getIcon } from '../../../utils';
 import Icon from '../../Icon';
-import styled from 'styled-components';
 import { marginBottom } from '../../../utils/get-margin';
 import { lineHeight } from '../../../utils/get-line-height';
 
@@ -28,8 +28,8 @@ const ContactsListItem = styled.li`
   align-content: center;
   align-items: center;
   justify-content: center;
-  height: ${props => props.theme.buttons.height}px;
-  width: ${props => props.theme.buttons.height}px;
+  height: ${(props) => props.theme.buttons.height}px;
+  width: ${(props) => props.theme.buttons.height}px;
   ${lineHeight(1)}
   border-radius: 50%;
   text-align: center;

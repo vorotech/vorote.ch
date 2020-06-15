@@ -1,23 +1,23 @@
 // @flow strict
 import React from 'react';
-import moment from 'moment';
 import { Link } from 'gatsby';
-import type { Edges } from '../../types';
+import moment from 'moment';
 import styled from 'styled-components';
+import type { Edges } from '../../types';
 import { marginTop, marginBottom } from '../../utils/get-margin';
 import { lineHeight } from '../../utils/get-line-height';
 
 const FeedItem = styled.div`
   ${marginTop(1.25)}
   &:last-child {
-    ${marginBottom(.5)}
+    ${marginBottom(0.5)}
   }
 `;
 
 const MetaTime = styled.time`
-  font-size: ${props => props.theme.fontSizes.small}px;
+  font-size: ${(props) => props.theme.fontSizes.small}px;
   color: var(--color-text);
-  font-weight: ${props => props.theme.fontWeights.heading};
+  font-weight: ${(props) => props.theme.fontWeights.heading};
   text-transform: uppercase;
 `;
 
@@ -26,9 +26,9 @@ const MetaDevider = styled.span`
 `;
 
 const MetaCategoryLink = styled(Link)`
-  font-size: ${props => props.theme.fontSizes.small}px;
+  font-size: ${(props) => props.theme.fontSizes.small}px;
   color: var(--color-secondary);
-  font-weight: ${props => props.theme.fontWeights.heading};
+  font-weight: ${(props) => props.theme.fontWeights.heading};
   text-transform: uppercase;
 
   &:hover,
@@ -38,10 +38,10 @@ const MetaCategoryLink = styled(Link)`
 `;
 
 const Title = styled.h2`
-  font-size: ${props => props.theme.fontSizes.base * 1.6875}px;
+  font-size: ${(props) => props.theme.fontSizes.base * 1.6875}px;
   ${lineHeight(1.5)}
   margin-top: 0;
-  ${marginBottom(.5)}
+  ${marginBottom(0.5)}
 `;
 
 const TitleLink = styled(Link)`
@@ -55,13 +55,13 @@ const TitleLink = styled(Link)`
 `;
 
 const Description = styled.p`
-  font-size: ${props => props.theme.fontSizes.base}px;
+  font-size: ${(props) => props.theme.fontSizes.base}px;
   ${lineHeight(1)}
-  ${marginBottom(.75)}
+  ${marginBottom(0.75)}
 `;
 
 const ReadMoreLink = styled(Link)`
-  font-size: ${props => props.theme.fontSizes.base}px;
+  font-size: ${(props) => props.theme.fontSizes.base}px;
   color: var(--color-primary);
 
   &:hover,
@@ -85,7 +85,9 @@ const Feed = ({ edges }: Props) => (
           </MetaTime>
           <MetaDevider />
           <span>
-            <MetaCategoryLink to={edge.node.fields.categorySlug}>{edge.node.frontmatter.category}</MetaCategoryLink>
+            <MetaCategoryLink to={edge.node.fields.categorySlug}>
+              {edge.node.frontmatter.category}
+            </MetaCategoryLink>
           </span>
         </div>
         <Title>

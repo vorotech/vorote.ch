@@ -14,17 +14,17 @@ const StyledContent = styled.div`
 `;
 
 const ContentTitle = styled.h1`
-  font-size: ${props => props.theme.fontSizes.base * 2}px;
+  font-size: ${(props) => props.theme.fontSizes.base * 2}px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: ${props => props.theme.fontWeights.heading};
+  font-weight: ${(props) => props.theme.fontWeights.heading};
   text-align: center;
   ${lineHeight(1.65)}
   ${marginTop(1)}
   margin-bottom: 0;
 
   ${mediaUp.md`
-    font-size: ${props => props.theme.fontSizes.base * 3}px;
+    font-size: ${(props) => props.theme.fontSizes.base * 3}px;
     ${lineHeight(2.25)}
     ${marginTop(2.25)}
     ${marginBottom(1.5)}
@@ -34,17 +34,17 @@ const ContentTitle = styled.h1`
 const ContentBody = styled.div`
   & figure {
     ${marginBottom(1)}
-  } 
+  }
 
   & figure blockquote {
     font-style: italic;
     text-align: center;
     margin-top: 0;
-    padding: ${props => props.theme.spacing}px 0;
+    padding: ${(props) => props.theme.spacing}px 0;
   }
 
   & figure blockquote p {
-    font-size: ${props => props.theme.fontSizes.base * 1.6817}px;
+    font-size: ${(props) => props.theme.fontSizes.base * 1.6817}px;
     ${lineHeight(1.5)}
     margin-top: 0;
     ${marginBottom(1)}
@@ -64,12 +64,12 @@ const ContentBody = styled.div`
   }
 
   ${mediaUp.md`
-    font-size: ${props => props.theme.fontSizes.base * 1.125}px;
+    font-size: ${(props) => props.theme.fontSizes.base * 1.125}px;
     ${lineHeight(1.125)}
     ${marginBottom(1.125)}
 
     & p {
-      font-size: ${props => props.theme.fontSizes.base * 1.125}px;
+      font-size: ${(props) => props.theme.fontSizes.base * 1.125}px;
       ${lineHeight(1.125)}
       ${marginBottom(1.125)}
     }

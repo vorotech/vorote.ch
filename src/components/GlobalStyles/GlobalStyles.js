@@ -9,11 +9,11 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     margin: 0 0 0 calc(100vw - 100%);
-    font-family: ${props => props.theme.fonts.body};
+    font-family: ${(props) => props.theme.fonts.body};
     color: var(--color-text);
     background-color: var(--color-background);
     ${lineHeight(1)}
-    font-size: ${props => props.theme.fontSizes.base}px;
+    font-size: ${(props) => props.theme.fontSizes.base}px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
@@ -27,50 +27,50 @@ const GlobalStyles = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: ${props => props.theme.fonts.heading};
-    font-weight: ${props => props.theme.fontWeights.heading};
+    font-family: ${(props) => props.theme.fonts.heading};
+    font-weight: ${(props) => props.theme.fontWeights.heading};
   }
 
   h1 {
-    font-size: ${props => props.theme.fontSizes.base  * 2.5}px;
+    font-size: ${(props) => props.theme.fontSizes.base * 2.5}px;
     ${lineHeight(2)}
     ${marginTop(4)}
     ${marginBottom(1)}
   }
 
   h2 {
-    font-size: ${props => props.theme.fontSizes.base  * 1.6875}px;
+    font-size: ${(props) => props.theme.fontSizes.base * 1.6875}px;
     ${lineHeight(1.5)}
     ${marginTop(2)}
-    ${marginBottom(.5)}
+    ${marginBottom(0.5)}
   }
 
   h3 {
-    font-size: ${props => props.theme.fontSizes.base  * 1.375}px;
+    font-size: ${(props) => props.theme.fontSizes.base * 1.375}px;
     ${lineHeight(1)}
     ${marginTop(2)}
-    ${marginBottom(.5)}
+    ${marginBottom(0.5)}
   }
 
   h4 {
-    font-size: ${props => props.theme.fontSizes.base  * 1.2}px;
+    font-size: ${(props) => props.theme.fontSizes.base * 1.2}px;
     ${lineHeight(1)}
     ${marginTop(1.5)}
-    ${marginBottom(.5)}
+    ${marginBottom(0.5)}
   }
 
   h5 {
-    font-size: ${props => props.theme.fontSizes.base}px;
+    font-size: ${(props) => props.theme.fontSizes.base}px;
     ${lineHeight(1)}
     ${marginTop(2.5)}
-    ${marginBottom(.5)}
+    ${marginBottom(0.5)}
   }
 
   h6 {
-    font-size: ${props => props.theme.fontSizes.base}px;
+    font-size: ${(props) => props.theme.fontSizes.base}px;
     ${lineHeight(1)}
     ${marginTop(2.5)}
-    ${marginBottom(.5)}
+    ${marginBottom(0.5)}
   }
 
   img {
@@ -118,7 +118,7 @@ const GlobalStyles = createGlobalStyle`
 
   b,
   strong {
-    font-weight: ${props => props.theme.fontWeights.heading};
+    font-weight: ${(props) => props.theme.fontWeights.heading};
   }
 
   p {
@@ -131,7 +131,7 @@ const GlobalStyles = createGlobalStyle`
     font-style: italic;
     text-align: center;
   }
-  
+
   figure {
     display: block;
     width: 100%;
@@ -139,10 +139,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   figcaption {
-    ${lineHeight(.75)}
-    ${marginTop(.25)}
+    ${lineHeight(0.75)}
+    ${marginTop(0.25)}
     color: var(--color-text);
-    font-size: ${props => props.theme.fontSizes.small}px;
+    font-size: ${(props) => props.theme.fontSizes.small}px;
     font-style: italic;
     margin-bottom: 0;
     text-align: center;

@@ -2,7 +2,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Page from './Page';
-import 'jest-styled-components'
+import 'jest-styled-components';
 import Theme from '../Theme';
 
 describe('Page', () => {

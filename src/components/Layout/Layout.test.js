@@ -5,7 +5,7 @@ import { useStaticQuery, StaticQuery } from 'gatsby';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import Layout from './Layout';
 import type { RenderCallback } from '../../types';
-import 'jest-styled-components'
+import 'jest-styled-components';
 import Theme from '../Theme';
 
 describe('Layout', () => {
@@ -29,7 +29,7 @@ describe('Layout', () => {
     const tree = renderer.create(
     <Theme>
       <Layout {...props} />
-    </Theme>  
+    </Theme>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

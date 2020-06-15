@@ -7,7 +7,7 @@ import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
 import pageContext from '../../jest/__fixtures__/page-context';
 import type { RenderCallback } from '../types';
-import 'jest-styled-components'
+import 'jest-styled-components';
 import Theme from '../components/Theme';
 
 describe('TagTemplate', () => {

@@ -1,8 +1,8 @@
 // @flow strict
 import React from 'react';
 import { Link } from 'gatsby';
-import { PAGINATION } from '../../constants';
 import styled, { css } from 'styled-components';
+import { PAGINATION } from '../../constants';
 import { marginTop } from '../../utils/get-margin';
 
 const StyledPagination = styled.div`
@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
   &:focus {
     color: var(--color-primary);
   }
-  ${props => props.disabled && css`
+  ${(props) => props.disabled && css`
   pointer-events: none;
   color: var(--color-gray700);
   `}
@@ -48,18 +48,15 @@ const Pagination = ({
   nextPagePath,
   hasNextPage,
   hasPrevPage
-}: Props) => {
-
-  return (
-    <StyledPagination>
-      <Previous>
-        <StyledLink rel="prev" to={hasPrevPage ? prevPagePath : '/'} disabled={!hasPrevPage}>{PAGINATION.PREV_PAGE}</StyledLink>
-      </Previous>
-      <Next>
-        <StyledLink rel="next" to={hasNextPage ? nextPagePath : '/'} disabled={!hasNextPage}>{PAGINATION.NEXT_PAGE}</StyledLink>
-      </Next>
-    </StyledPagination>
-  );
-};
+}: Props) => (
+  <StyledPagination>
+    <Previous>
+      <StyledLink rel="prev" to={hasPrevPage ? prevPagePath : '/'} disabled={!hasPrevPage}>{PAGINATION.PREV_PAGE}</StyledLink>
+    </Previous>
+    <Next>
+      <StyledLink rel="next" to={hasNextPage ? nextPagePath : '/'} disabled={!hasNextPage}>{PAGINATION.NEXT_PAGE}</StyledLink>
+    </Next>
+  </StyledPagination>
+);
 
 export default Pagination;

@@ -1,18 +1,18 @@
 // @flow strict
 import React from 'react';
+import styled from 'styled-components';
+import { grid } from 'styled-components-grid';
 import Author from './Author';
 import Contacts from './Contacts';
 import Copyright from './Copyright';
 import Menu from './Menu';
-import styled from 'styled-components';
 import { useSiteMetadata } from '../../hooks';
 import { mediaUp } from '../../utils/get-media-query';
-import { grid } from 'styled-components-grid';
 import ColorModeToggler from './ColorModeToggler';
 
 const StyledSidebar = styled.div`
   width: 100%;
-  ${grid.unit({ size: { sm: 5/12, md: 1/3 } })}
+  ${grid.unit({ size: { sm: 5 / 12, md: 1 / 3 } })}
 `;
 
 const SidebarInner = styled.div`

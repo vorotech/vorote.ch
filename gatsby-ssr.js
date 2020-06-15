@@ -1,3 +1,4 @@
-import wrapWithProvider from './src/gatsbyapis/wrap-with-provider'
+import wrapWithProvider from './src/gatsbyapis/wrap-with-provider';
 
-export const wrapRootElement = wrapWithProvider
+/* eslint-disable import/prefer-default-export */
+export const wrapRootElement = wrapWithProvider;

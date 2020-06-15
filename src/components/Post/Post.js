@@ -1,15 +1,15 @@
 // @flow strict
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
+import Grid from 'styled-components-grid';
 import Author from './Author';
 import Comments from './Comments';
 import Content from './Content';
 import Meta from './Meta';
 import Tags from './Tags';
-import styled from 'styled-components';
 import type { Node } from '../../types';
 import { marginTop } from '../../utils/get-margin';
-import Grid from 'styled-components-grid';
 import { mediaUp } from '../../utils/get-media-query';
 
 const PostFooter = styled.div`
@@ -31,14 +31,14 @@ const PostComments = styled.div`
 const HomeButton = styled(Link)`
   display: block;
   max-width: 90px;
-  height: ${props => props.theme.buttons.height}px;
+  height: ${(props) => props.theme.buttons.height}px;
   padding: 0 24px;
-  line-height: ${props => props.theme.buttons.height}px;
+  line-height: ${(props) => props.theme.buttons.height}px;
   text-align: center;
   color: var(--color-text);
   border: 1px solid var(--color-gray500);
-  border-radius: ${props => props.theme.buttons.borderRadius}px;
-  font-size: ${props => props.theme.fontSizes.base}px;
+  border-radius: ${(props) => props.theme.buttons.borderRadius}px;
+  font-size: ${(props) => props.theme.fontSizes.base}px;
   font-weight: normal;
   margin-left: auto;
   margin-right: auto;

@@ -2,7 +2,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Menu from './Menu';
-import 'jest-styled-components'
+import 'jest-styled-components';
 import Theme from '../../Theme';
 
 describe('Menu', () => {

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { margin, marginBottom } from '../../../utils/get-margin';
 import { lineHeight } from '../../../utils/get-line-height';
 
-const Photo = styled.img` 
+const Photo = styled.img`
   display: inline-block;
   margin-bottom: 0;
   border-radius: 50%;
@@ -13,17 +13,17 @@ const Photo = styled.img`
 `;
 
 const IndexTitle = styled.h1`
-  font-size: ${props => props.theme.fontSizes.base * 1.125}px;
-  font-weight: ${props => props.theme.fontWeights.heading};
+  font-size: ${(props) => props.theme.fontSizes.base * 1.125}px;
+  font-weight: ${(props) => props.theme.fontWeights.heading};
   ${lineHeight(1.125)}
-  ${margin(.5, 0)}
+  ${margin(0.5, 0)}
 `;
 
 const Title = styled.h2`
-  font-size: ${props => props.theme.fontSizes.base * 1.125}px;
-  font-weight: ${props => props.theme.fontWeights.heading};
+  font-size: ${(props) => props.theme.fontSizes.base * 1.125}px;
+  font-weight: ${(props) => props.theme.fontWeights.heading};
   ${lineHeight(1.125)}
-  ${margin(.5, 0)}
+  ${margin(0.5, 0)}
 `;
 
 const TitleLink = styled(Link)`
@@ -38,7 +38,7 @@ const Subtitle = styled.p`
   color: var(--color-gray500);
   ${lineHeight(1)}
   ${marginBottom(1)}
-`; 
+`;
 
 type Props = {
   author: {
@@ -60,14 +60,14 @@ const Author = ({ author, isIndex }: Props) => (
       />
     </Link>
 
-    { isIndex === true ? (
+    {isIndex === true ? (
       <IndexTitle>
         <TitleLink to="/">{author.name}</TitleLink>
       </IndexTitle>
     ) : (
-      <Title>
-        <TitleLink to="/">{author.name}</TitleLink>
-      </Title>
+        <Title>
+          <TitleLink to="/">{author.name}</TitleLink>
+        </Title>
     )}
     <Subtitle>{author.bio}</Subtitle>
   </div>

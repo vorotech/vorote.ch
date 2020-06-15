@@ -2,7 +2,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Author from './Author';
-import 'jest-styled-components'
+import 'jest-styled-components';
 import Theme from '../../Theme';
 
 describe('Author', () => {
@@ -17,9 +17,9 @@ describe('Author', () => {
 
   it('renders correctly', () => {
     const tree = renderer.create(
-    <Theme>
-      <Author {...props} />
-    </Theme>  
+      <Theme>
+        <Author {...props} />
+      </Theme>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

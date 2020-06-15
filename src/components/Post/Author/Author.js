@@ -1,7 +1,7 @@
 // @flow strict
 import React from 'react';
-import { getContactHref } from '../../../utils';
 import styled from 'styled-components';
+import { getContactHref } from '../../../utils';
 import { useSiteMetadata } from '../../../hooks';
 import { margin } from '../../../utils/get-margin';
 import { lineHeight } from '../../../utils/get-line-height';

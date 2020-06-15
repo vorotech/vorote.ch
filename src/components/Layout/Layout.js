@@ -2,10 +2,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { withPrefix } from 'gatsby';
-import type { Node as ReactNode } from 'react';
-import { useSiteMetadata } from '../../hooks';
 import styled from 'styled-components';
 import Grid, { grid } from 'styled-components-grid';
+import type { Node as ReactNode } from 'react';
+import { useSiteMetadata } from '../../hooks';
 
 const StyledLayout = styled.div`
  ${grid({ halign: 'justify-center' })}
@@ -15,7 +15,7 @@ type Props = {
   children: ReactNode,
   title: string,
   description?: string,
-  socialImage? :string
+  socialImage?: string
 };
 
 const Layout = ({
@@ -41,7 +41,7 @@ const Layout = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-      <Grid.Unit size={{ lg: 10/12 }}>
+      <Grid.Unit size={{ lg: 10 / 12 }}>
         <Grid>
           {children}
         </Grid>

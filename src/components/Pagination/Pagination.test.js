@@ -2,7 +2,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Pagination from './Pagination';
-import 'jest-styled-components'
+import 'jest-styled-components';
 import Theme from '../Theme';
 
 describe('Pagination', () => {

@@ -1,6 +1,6 @@
 'use strict';
 
-// TODO Covert to site metadata 
+// TODO Covert to site metadata
 
 module.exports = {
   url: 'https://vorote.ch',

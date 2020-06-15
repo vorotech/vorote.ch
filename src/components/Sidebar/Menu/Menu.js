@@ -20,7 +20,7 @@ const MenuListItem = styled.li`
 `;
 
 const ListItemLink = styled(Link)`
-  font-size: ${props => props.theme.fontSizes.base}px;
+  font-size: ${(props) => props.theme.fontSizes.base}px;
   color: var(--color-text);
   font-weight: normal;
   border: 0;

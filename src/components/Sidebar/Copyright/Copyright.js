@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledCopyright = styled.div`
   color: var(--color-gray500);
-  font-size: ${props => props.theme.fontSizes.small}px;
+  font-size: ${(props) => props.theme.fontSizes.small}px;
 `;
 
 type Props = {

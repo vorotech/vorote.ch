@@ -2,11 +2,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { lineHeight } from '../../../utils/get-line-height';
 import { marginBottom } from '../../../utils/get-margin';
 
 const StyledTags = styled.div`
-  ${marginBottom(.5)}
+  ${marginBottom(0.5)}
 `;
 
 const TagsList = styled.ul`
@@ -22,12 +21,12 @@ const TagsListItem = styled.li`
 
 const TagLink = styled(Link)`
   display: inline-block;
-  height: ${props => props.theme.buttons.height}px;
+  height: ${(props) => props.theme.buttons.height}px;
   padding: 0 24px;
-  line-height: ${props => props.theme.buttons.height}px;
+  line-height: ${(props) => props.theme.buttons.height}px;
   border: 1px solid var(--color-gray500);
   text-decoration: none;
-  border-radius: ${props => props.theme.buttons.borderRadius}px;
+  border-radius: ${(props) => props.theme.buttons.borderRadius}px;
   color: var(--color-text);
 
   &:hover,

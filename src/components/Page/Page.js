@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import { grid } from 'styled-components-grid';
 import { mediaUp } from '../../utils/get-media-query';
 import { margin, marginBottom } from '../../utils/get-margin';
 import { lineHeight } from '../../utils/get-line-height';
-import { grid } from 'styled-components-grid';
 
 const StyledPage = styled.div`
   ${marginBottom(2)}
-  ${grid.unit({ size: { sm: 7/12, md: 2/3 } })}
+  ${grid.unit({ size: { sm: 7 / 12, md: 2 / 3 } })}
 `;
 
 const PageInner = styled.div`
@@ -21,15 +21,15 @@ const PageInner = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: ${props => props.theme.fontSizes.base * 2.5}px;
-  font-weight: ${props => props.theme.fontWeights.heading};
+  font-size: ${(props) => props.theme.fontSizes.base * 2.5}px;
+  font-weight: ${(props) => props.theme.fontWeights.heading};
   ${lineHeight(2)}
   margin-top: 0px;
   ${marginBottom(1.45)}
 `;
 
 const PageContent = styled.div`
-  font-size: ${props => props.theme.fontSizes.base}px;
+  font-size: ${(props) => props.theme.fontSizes.base}px;
   ${lineHeight(1)}
   ${margin(0, 0, 1)}
 `;
@@ -49,7 +49,7 @@ const Page = ({ title, children }: Props) => {
   return (
     <StyledPage ref={pageRef}>
       <PageInner>
-        { title && <Title>{title}</Title>}
+        {title && <Title>{title}</Title>}
         <PageContent>
           {children}
         </PageContent>
