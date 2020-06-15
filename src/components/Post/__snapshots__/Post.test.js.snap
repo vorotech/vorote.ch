@@ -1,100 +1,377 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Post renders correctly 1`] = `
-<div
-  className="post"
->
-  <a
-    className="post__home-button"
+Array [
+  .c0 {
+  display: block;
+  max-width: 90px;
+  height: 35px;
+  padding: 0 24px;
+  line-height: 35px;
+  text-align: center;
+  color: var(--color-text);
+  border: 1px solid var(--color-gray500);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26px;
+}
+
+.c0:hover,
+.c0:focus {
+  color: var(--color-primary);
+}
+
+@media screen and (min-width:36em) {
+
+}
+
+@media screen and (min-width:48em) {
+
+}
+
+@media screen and (min-width:48em) {
+
+}
+
+@media screen and (min-width:48em) {
+
+}
+
+@media (min-width:48em) {
+
+}
+
+@media screen and (min-width:48em) {
+
+}
+
+@media screen and (min-width:48em) {
+
+}
+
+@media screen and (min-width:48em) {
+  .c0 {
+    position: fixed;
+    max-width: auto;
+    margin: 0;
+    top: 30px;
+    left: 30px;
+  }
+}
+
+<a
+    className="c0"
     href="/"
   >
     All Articles
-  </a>
-  <div
-    className="post__content"
+  </a>,
+  .c11 {
+  border-top: 1px solid var(--color-gray500);
+  padding-top: 20px;
+  line-height: 1.625em;
+  margin: 26px 0px;
+}
+
+.c12 {
+  display: block;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.c3 {
+  font-size: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  text-align: center;
+  line-height: 2.68125em;
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+
+.c4 figure {
+  margin-bottom: 26px;
+}
+
+.c4 figure blockquote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0;
+  padding: 26px 0;
+}
+
+.c4 figure blockquote p {
+  font-size: 26.9072px;
+  line-height: 2.4375em;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+.c4 a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c4 img {
+  max-width: 100%;
+}
+
+.c6 {
+  font-style: italic;
+}
+
+.c7 {
+  margin-bottom: 13px;
+}
+
+.c8 {
+  list-style: none;
+  margin: 0 -10px;
+  padding: 0;
+}
+
+.c9 {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.c10 {
+  display: inline-block;
+  height: 35px;
+  padding: 0 24px;
+  line-height: 35px;
+  border: 1px solid var(--color-gray500);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 20px;
+  color: var(--color-text);
+}
+
+.c10:hover,
+.c10:focus {
+  color: var(--color-primary);
+}
+
+.c1 {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c5 {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.c13 {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (min-width:36em) {
+  .c11 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c2 {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c3 {
+    font-size: 48px;
+    line-height: 3.65625em;
+    margin-top: 58.5px;
+    margin-bottom: 39px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c4 {
+    font-size: 18px;
+    line-height: 1.828125em;
+    margin-bottom: 29.25px;
+  }
+
+  .c4 p {
+    font-size: 18px;
+    line-height: 1.828125em;
+    margin-bottom: 29.25px;
+  }
+}
+
+@media (min-width:48em) {
+  .c1 {
+    -webkit-flex-basis: 66.6667%;
+    -ms-flex-preferred-size: 66.6667%;
+    flex-basis: 66.6667%;
+    max-width: 66.6667%;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c5 {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c13 {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:48em) {
+
+}
+
+<div
+    className="c0"
+    id="content-grid"
   >
     <div
-      className="content"
-    >
-      <h1
-        className="content__title"
-      >
-        test
-      </h1>
-      <div
-        className="content__body"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<p>test</p>",
-          }
+      className="c1"
+      size={
+        Object {
+          "md": 0.6666666666666666,
         }
+      }
+    >
+      <div
+        className="c2"
+      >
+        <h1
+          className="c3"
+        >
+          test
+        </h1>
+        <div
+          className="c4"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<p>test</p>",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="c1"
+      size={
+        Object {
+          "md": 0.6666666666666666,
+        }
+      }
+    >
+      <div
+        className="c5"
+      >
+        <div>
+          <p
+            className="c6"
+          >
+            Published 
+            1 Sep 2016
+          </p>
+        </div>
+        <div
+          className="c7"
+        >
+          <ul
+            className="c8"
+          >
+            <li
+              className="c9"
+            >
+              <a
+                className="c10"
+                href="/test_0"
+              >
+                test_0
+              </a>
+            </li>
+            <li
+              className="c9"
+            >
+              <a
+                className="c10"
+                href="/test_1"
+              >
+                test_1
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          className="c11"
+        >
+          <p>
+            Test bio
+            <a
+              className="c12"
+              href="https://www.twitter.com/#"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <strong>
+                Test name
+              </strong>
+               on Twitter
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c1"
+      size={
+        Object {
+          "md": 0.6666666666666666,
+        }
+      }
+    >
+      <div
+        className="c13"
       />
     </div>
-  </div>
-  <div
-    className="post__footer"
-  >
-    <div
-      className="meta"
-    >
-      <p
-        className="meta__date"
-      >
-        Published 
-        1 Sep 2016
-      </p>
-    </div>
-    <div
-      className="tags"
-    >
-      <ul
-        className="tags__list"
-      >
-        <li
-          className="tags__list-item"
-        >
-          <a
-            className="tags__list-item-link"
-            href="/test_0"
-          >
-            test_0
-          </a>
-        </li>
-        <li
-          className="tags__list-item"
-        >
-          <a
-            className="tags__list-item-link"
-            href="/test_1"
-          >
-            test_1
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div
-      className="author"
-    >
-      <p
-        className="author__bio"
-      >
-        Test bio
-        <a
-          className="author__bio-twitter"
-          href="https://www.twitter.com/#"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <strong>
-            Test name
-          </strong>
-           on Twitter
-        </a>
-      </p>
-    </div>
-  </div>
-  <div
-    className="post__comments"
-  />
-</div>
+  </div>,
+]
 `;

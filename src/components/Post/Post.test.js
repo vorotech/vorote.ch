@@ -5,6 +5,8 @@ import { useStaticQuery, StaticQuery } from 'gatsby';
 import Post from './Post';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import type { RenderCallback } from '../../types';
+import 'jest-styled-components'
+import Theme from '../Theme';
 
 describe('Post', () => {
   beforeEach(() => {
@@ -40,7 +42,11 @@ describe('Post', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Post {...props} />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <Post {...props} />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -5,6 +5,8 @@ import { useStaticQuery, StaticQuery } from 'gatsby';
 import Sidebar from './Sidebar';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import type { RenderCallback } from '../../types';
+import 'jest-styled-components'
+import Theme from '../Theme';
 
 describe('Sidebar', () => {
   beforeEach(() => {
@@ -21,7 +23,11 @@ describe('Sidebar', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Sidebar {...props} />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <Sidebar {...props} />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

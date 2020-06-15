@@ -1,16 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Content renders correctly 1`] = `
+.c0 {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.c1 {
+  font-size: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  text-align: center;
+  line-height: 2.68125em;
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+
+.c2 figure {
+  margin-bottom: 26px;
+}
+
+.c2 figure blockquote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0;
+  padding: 26px 0;
+}
+
+.c2 figure blockquote p {
+  font-size: 26.9072px;
+  line-height: 2.4375em;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+.c2 a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c2 img {
+  max-width: 100%;
+}
+
+@media screen and (min-width:48em) {
+  .c0 {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c1 {
+    font-size: 48px;
+    line-height: 3.65625em;
+    margin-top: 58.5px;
+    margin-bottom: 39px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c2 {
+    font-size: 18px;
+    line-height: 1.828125em;
+    margin-bottom: 29.25px;
+  }
+
+  .c2 p {
+    font-size: 18px;
+    line-height: 1.828125em;
+    margin-bottom: 29.25px;
+  }
+}
+
 <div
-  className="content"
+  className="c0"
 >
   <h1
-    className="content__title"
+    className="c1"
   >
     test
   </h1>
   <div
-    className="content__body"
+    className="c2"
     dangerouslySetInnerHTML={
       Object {
         "__html": "<p>test</p>",

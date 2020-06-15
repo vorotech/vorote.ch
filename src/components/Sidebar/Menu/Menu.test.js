@@ -2,6 +2,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Menu from './Menu';
+import 'jest-styled-components'
+import Theme from '../../Theme';
 
 describe('Menu', () => {
   const props = {
@@ -18,7 +20,11 @@ describe('Menu', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Menu {...props} />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <Menu {...props} />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

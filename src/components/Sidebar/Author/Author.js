@@ -1,7 +1,44 @@
 // @flow strict
 import React from 'react';
 import { withPrefix, Link } from 'gatsby';
-import styles from './Author.module.scss';
+import styled from 'styled-components';
+import { margin, marginBottom } from '../../../utils/get-margin';
+import { lineHeight } from '../../../utils/get-line-height';
+
+const Photo = styled.img` 
+  display: inline-block;
+  margin-bottom: 0;
+  border-radius: 50%;
+  background-clip: padding-box;
+`;
+
+const IndexTitle = styled.h1`
+  font-size: ${props => props.theme.fontSizes.base * 1.125}px;
+  font-weight: ${props => props.theme.fontWeights.heading};
+  ${lineHeight(1.125)}
+  ${margin(.5, 0)}
+`;
+
+const Title = styled.h2`
+  font-size: ${props => props.theme.fontSizes.base * 1.125}px;
+  font-weight: ${props => props.theme.fontWeights.heading};
+  ${lineHeight(1.125)}
+  ${margin(.5, 0)}
+`;
+
+const TitleLink = styled(Link)`
+  color: var(--color-text);
+  &:hover,
+  &:focus {
+    color: var(--color-text);
+  }
+`;
+
+const Subtitle = styled.p`
+  color: var(--color-gray500);
+  ${lineHeight(1)}
+  ${marginBottom(1)}
+`; 
 
 type Props = {
   author: {
@@ -13,11 +50,10 @@ type Props = {
 };
 
 const Author = ({ author, isIndex }: Props) => (
-  <div className={styles['author']}>
+  <div>
     <Link to="/">
-      <img
+      <Photo
         src={withPrefix(author.photo)}
-        className={styles['author__photo']}
         width="75"
         height="75"
         alt={author.name}
@@ -25,15 +61,15 @@ const Author = ({ author, isIndex }: Props) => (
     </Link>
 
     { isIndex === true ? (
-      <h1 className={styles['author__title']}>
-        <Link className={styles['author__title-link']} to="/">{author.name}</Link>
-      </h1>
+      <IndexTitle>
+        <TitleLink to="/">{author.name}</TitleLink>
+      </IndexTitle>
     ) : (
-      <h2 className={styles['author__title']}>
-        <Link className={styles['author__title-link']} to="/">{author.name}</Link>
-      </h2>
+      <Title>
+        <TitleLink to="/">{author.name}</TitleLink>
+      </Title>
     )}
-    <p className={styles['author__subtitle']}>{author.bio}</p>
+    <Subtitle>{author.bio}</Subtitle>
   </div>
 );
 

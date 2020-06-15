@@ -6,6 +6,8 @@ import PageTemplate from './page-template';
 import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import markdownRemark from '../../jest/__fixtures__/markdown-remark';
 import type { RenderCallback } from '../types';
+import 'jest-styled-components'
+import Theme from '../components/Theme';
 
 describe('PageTemplate', () => {
   const props = {
@@ -24,7 +26,11 @@ describe('PageTemplate', () => {
   });
 
   it('renders correctly', () => {
-    const tree = renderer.create(<PageTemplate {...props} />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <PageTemplate {...props} />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,23 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Contacts renders correctly 1`] = `
+.c4 {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 {
+  margin-bottom: 26px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  list-style: none;
+  padding: 0;
+  margin: 10px -3px;
+  width: 140px;
+}
+
+.c2 {
+  padding: 0;
+  margin: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  line-height: 1.625em;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid var(--color-gray300);
+}
+
+.c3 {
+  border: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--color-text);
+}
+
+.c3:hover,
+.c3:focus {
+  color: var(--color-primary);
+}
+
 <div
-  className="contacts"
+  className="c0"
 >
   <ul
-    className="contacts__list"
+    className="c1"
   >
     <li
-      className="contacts__list-item"
+      className="c2"
     >
       <a
-        className="contacts__list-item-link"
+        className="c3"
         href="mailto:#"
         rel="noopener noreferrer"
         target="_blank"
       >
         <svg
-          className="icon"
+          className="c4"
           viewBox="0 0 28 28"
         >
           <title>
@@ -30,16 +115,16 @@ exports[`Contacts renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="contacts__list-item"
+      className="c2"
     >
       <a
-        className="contacts__list-item-link"
+        className="c3"
         href="https://www.twitter.com/#"
         rel="noopener noreferrer"
         target="_blank"
       >
         <svg
-          className="icon"
+          className="c4"
           viewBox="0 0 26 28"
         >
           <title>
@@ -52,16 +137,16 @@ exports[`Contacts renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="contacts__list-item"
+      className="c2"
     >
       <a
-        className="contacts__list-item-link"
+        className="c3"
         href="https://vk.com/#"
         rel="noopener noreferrer"
         target="_blank"
       >
         <svg
-          className="icon"
+          className="c4"
           viewBox="0 0 31 28"
         >
           <title>
@@ -74,16 +159,16 @@ exports[`Contacts renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="contacts__list-item"
+      className="c2"
     >
       <a
-        className="contacts__list-item-link"
+        className="c3"
         href="https://github.com/#"
         rel="noopener noreferrer"
         target="_blank"
       >
         <svg
-          className="icon"
+          className="c4"
           viewBox="0 0 26 28"
         >
           <title>
@@ -96,16 +181,16 @@ exports[`Contacts renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="contacts__list-item"
+      className="c2"
     >
       <a
-        className="contacts__list-item-link"
+        className="c3"
         href="#"
         rel="noopener noreferrer"
         target="_blank"
       >
         <svg
-          className="icon"
+          className="c4"
           viewBox="0 0 22 28"
         >
           <title>
@@ -118,16 +203,16 @@ exports[`Contacts renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="contacts__list-item"
+      className="c2"
     >
       <a
-        className="contacts__list-item-link"
+        className="c3"
         href="https://t.me/#"
         rel="noopener noreferrer"
         target="_blank"
       >
         <svg
-          className="icon"
+          className="c4"
           viewBox="0 0 28 28"
         >
           <title>

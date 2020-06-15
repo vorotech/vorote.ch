@@ -2,6 +2,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Tags from './Tags';
+import 'jest-styled-components'
+import Theme from '../../Theme';
+
 
 describe('Tags', () => {
   it('renders correctly', () => {
@@ -16,7 +19,11 @@ describe('Tags', () => {
       ]
     };
 
-    const tree = renderer.create(<Tags {...props} />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <Tags {...props} />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

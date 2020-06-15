@@ -1,7 +1,40 @@
 // @flow strict
 import React from 'react';
 import { Link } from 'gatsby';
-import styles from './Tags.module.scss';
+import styled from 'styled-components';
+import { lineHeight } from '../../../utils/get-line-height';
+import { marginBottom } from '../../../utils/get-margin';
+
+const StyledTags = styled.div`
+  ${marginBottom(.5)}
+`;
+
+const TagsList = styled.ul`
+  list-style: none;
+  margin: 0 -10px;
+  padding: 0;
+`;
+
+const TagsListItem = styled.li`
+  display: inline-block;
+  margin: 10px 5px;
+`;
+
+const TagLink = styled(Link)`
+  display: inline-block;
+  height: ${props => props.theme.buttons.height}px;
+  padding: 0 24px;
+  line-height: ${props => props.theme.buttons.height}px;
+  border: 1px solid var(--color-gray500);
+  text-decoration: none;
+  border-radius: ${props => props.theme.buttons.borderRadius}px;
+  color: var(--color-text);
+
+  &:hover,
+  &:focus {
+    color: var(--color-primary);
+  }
+`;
 
 type Props = {
   tags: string[],
@@ -9,17 +42,15 @@ type Props = {
 };
 
 const Tags = ({ tags, tagSlugs }: Props) => (
-  <div className={styles['tags']}>
-    <ul className={styles['tags__list']}>
+  <StyledTags>
+    <TagsList>
       {tagSlugs && tagSlugs.map((slug, i) => (
-        <li className={styles['tags__list-item']} key={tags[i]}>
-          <Link to={slug} className={styles['tags__list-item-link']}>
-            {tags[i]}
-          </Link>
-        </li>
+        <TagsListItem key={tags[i]}>
+          <TagLink to={slug}>{tags[i]}</TagLink>
+        </TagsListItem>
       ))}
-    </ul>
-  </div>
+    </TagsList>
+  </StyledTags>
 );
 
 export default Tags;

@@ -2,6 +2,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Feed from './Feed';
+import 'jest-styled-components'
+import Theme from '../Theme';
 
 describe('Feed', () => {
   const props = {
@@ -60,7 +62,11 @@ describe('Feed', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Feed {...props} />).toJSON();
+    const tree = renderer.create(
+    <Theme>
+      <Feed {...props} />
+    </Theme>
+    ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

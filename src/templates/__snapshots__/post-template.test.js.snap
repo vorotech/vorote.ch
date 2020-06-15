@@ -1,104 +1,406 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PostTemplate renders correctly 1`] = `
+.c1 {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c5 {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c15 {
+  border-top: 1px solid var(--color-gray500);
+  padding-top: 20px;
+  line-height: 1.625em;
+  margin: 26px 0px;
+}
+
+.c16 {
+  display: block;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c6 {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.c7 {
+  font-size: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  text-align: center;
+  line-height: 2.68125em;
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+
+.c8 figure {
+  margin-bottom: 26px;
+}
+
+.c8 figure blockquote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 0;
+  padding: 26px 0;
+}
+
+.c8 figure blockquote p {
+  font-size: 26.9072px;
+  line-height: 2.4375em;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+.c8 a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8 * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c8 img {
+  max-width: 100%;
+}
+
+.c10 {
+  font-style: italic;
+}
+
+.c11 {
+  margin-bottom: 13px;
+}
+
+.c12 {
+  list-style: none;
+  margin: 0 -10px;
+  padding: 0;
+}
+
+.c13 {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.c14 {
+  display: inline-block;
+  height: 35px;
+  padding: 0 24px;
+  line-height: 35px;
+  border: 1px solid var(--color-gray500);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 20px;
+  color: var(--color-text);
+}
+
+.c14:hover,
+.c14:focus {
+  color: var(--color-primary);
+}
+
+.c9 {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.c17 {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.c3 {
+  display: block;
+  max-width: 90px;
+  height: 35px;
+  padding: 0 24px;
+  line-height: 35px;
+  text-align: center;
+  color: var(--color-text);
+  border: 1px solid var(--color-gray500);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 26px;
+}
+
+.c3:hover,
+.c3:focus {
+  color: var(--color-primary);
+}
+
+@media (min-width:62em) {
+  .c1 {
+    -webkit-flex-basis: 83.3333%;
+    -ms-flex-preferred-size: 83.3333%;
+    flex-basis: 83.3333%;
+    max-width: 83.3333%;
+  }
+}
+
+@media (min-width:48em) {
+  .c5 {
+    -webkit-flex-basis: 66.6667%;
+    -ms-flex-preferred-size: 66.6667%;
+    flex-basis: 66.6667%;
+    max-width: 66.6667%;
+  }
+}
+
+@media screen and (min-width:36em) {
+  .c15 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c6 {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c7 {
+    font-size: 48px;
+    line-height: 3.65625em;
+    margin-top: 58.5px;
+    margin-bottom: 39px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c8 {
+    font-size: 18px;
+    line-height: 1.828125em;
+    margin-bottom: 29.25px;
+  }
+
+  .c8 p {
+    font-size: 18px;
+    line-height: 1.828125em;
+    margin-bottom: 29.25px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c9 {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c17 {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c3 {
+    position: fixed;
+    max-width: auto;
+    margin: 0;
+    top: 30px;
+    left: 30px;
+  }
+}
+
 <div
-  className="layout"
+  className="c0"
 >
   <div
-    className="post"
+    className="c1"
+    size={
+      Object {
+        "lg": 0.8333333333333334,
+      }
+    }
   >
-    <a
-      className="post__home-button"
-      href="/"
-    >
-      All Articles
-    </a>
     <div
-      className="post__content"
+      className="c2"
     >
-      <div
-        className="content"
+      <a
+        className="c3"
+        href="/"
       >
-        <h1
-          className="content__title"
-        >
-          test
-        </h1>
+        All Articles
+      </a>
+      <div
+        className="c4"
+        id="content-grid"
+      >
         <div
-          className="content__body"
-          dangerouslySetInnerHTML={
+          className="c5"
+          size={
             Object {
-              "__html": "<p>test</p>",
+              "md": 0.6666666666666666,
             }
           }
-        />
+        >
+          <div
+            className="c6"
+          >
+            <h1
+              className="c7"
+            >
+              test
+            </h1>
+            <div
+              className="c8"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>test</p>",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          className="c5"
+          size={
+            Object {
+              "md": 0.6666666666666666,
+            }
+          }
+        >
+          <div
+            className="c9"
+          >
+            <div>
+              <p
+                className="c10"
+              >
+                Published 
+                1 Sep 2016
+              </p>
+            </div>
+            <div
+              className="c11"
+            >
+              <ul
+                className="c12"
+              >
+                <li
+                  className="c13"
+                >
+                  <a
+                    className="c14"
+                    href="/test_0"
+                  >
+                    test_0
+                  </a>
+                </li>
+                <li
+                  className="c13"
+                >
+                  <a
+                    className="c14"
+                    href="/test_1"
+                  >
+                    test_1
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="c15"
+            >
+              <p>
+                Test bio
+                <a
+                  className="c16"
+                  href="https://www.twitter.com/#"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <strong>
+                    Test name
+                  </strong>
+                   on Twitter
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c5"
+          size={
+            Object {
+              "md": 0.6666666666666666,
+            }
+          }
+        >
+          <div
+            className="c17"
+          />
+        </div>
       </div>
     </div>
-    <div
-      className="post__footer"
-    >
-      <div
-        className="meta"
-      >
-        <p
-          className="meta__date"
-        >
-          Published 
-          1 Sep 2016
-        </p>
-      </div>
-      <div
-        className="tags"
-      >
-        <ul
-          className="tags__list"
-        >
-          <li
-            className="tags__list-item"
-          >
-            <a
-              className="tags__list-item-link"
-              href="/test_0"
-            >
-              test_0
-            </a>
-          </li>
-          <li
-            className="tags__list-item"
-          >
-            <a
-              className="tags__list-item-link"
-              href="/test_1"
-            >
-              test_1
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div
-        className="author"
-      >
-        <p
-          className="author__bio"
-        >
-          Test bio
-          <a
-            className="author__bio-twitter"
-            href="https://www.twitter.com/#"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <strong>
-              Test name
-            </strong>
-             on Twitter
-          </a>
-        </p>
-      </div>
-    </div>
-    <div
-      className="post__comments"
-    />
   </div>
 </div>
 `;

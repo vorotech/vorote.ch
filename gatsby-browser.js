@@ -1,4 +1,7 @@
-'use strict';
+import 'normalize.css'
+import './static/css/colors.css'
+import './static/css/switch.css'
+import './static/css/prismjs/theme.min.css'
+import wrapWithProvider from './src/gatsbyapis/wrap-with-provider'
 
-require('./src/assets/scss/init.scss');
-require('./static/css/prismjs/theme.min.css');
+export const wrapRootElement = wrapWithProvider
