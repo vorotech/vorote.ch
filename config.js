@@ -8,9 +8,9 @@ module.exports = {
   title: 'Blog by Dmytro Vorotyntsev',
   subtitle: 'DevOps Transformation From Zero to Hero',
   copyright: '© Licensed under a CC BY 4.0 License.',
-  disqusShortname: '',
+  disqusShortname: 'vorotech',
   postsPerPage: 4,
-  googleAnalyticsId: '',
+  googleAnalyticsId: 'UA-9958905-5',
   menu: [
     {
       label: 'Articles',
