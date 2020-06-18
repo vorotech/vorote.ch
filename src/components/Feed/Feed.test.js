@@ -16,7 +16,10 @@ describe('Feed', () => {
             tagSlugs: [
               '/test-1',
               '/test-2'
-            ]
+            ],
+            readingTime: {
+              text: '1 min read'
+            }
           },
           frontmatter: {
             date: '2016-09-01',
@@ -41,7 +44,10 @@ describe('Feed', () => {
             tagSlugs: [
               '/test-1',
               '/test-2'
-            ]
+            ],
+            readingTime: {
+              text: '1 min read'
+            }
           },
           frontmatter: {
             date: '2016-09-01',

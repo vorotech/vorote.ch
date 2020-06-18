@@ -690,8 +690,13 @@ exports[`IndexTemplate renders correctly 1`] = `
                   className="c29"
                   href="/test_0"
                 >
-                  Read
+                  Read post
                 </a>
+                 
+                <span>
+                  🕒 
+                  1 min read
+                </span>
               </div>
               <div
                 className="c22"
@@ -734,8 +739,13 @@ exports[`IndexTemplate renders correctly 1`] = `
                   className="c29"
                   href="/test_1"
                 >
-                  Read
+                  Read post
                 </a>
+                 
+                <span>
+                  🕒 
+                  1 min read
+                </span>
               </div>
             </div>
             <div

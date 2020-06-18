@@ -108,8 +108,13 @@ exports[`Feed renders correctly 1`] = `
       className="c7"
       href="/test_0"
     >
-      Read
+      Read post
     </a>
+     
+    <span>
+      🕒 
+      1 min read
+    </span>
   </div>
   <div
     className="c0"
@@ -152,8 +157,13 @@ exports[`Feed renders correctly 1`] = `
       className="c7"
       href="/test_1"
     >
-      Read
+      Read post
     </a>
+     
+    <span>
+      🕒 
+      1 min read
+    </span>
   </div>
 </div>
 `;

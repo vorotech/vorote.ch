@@ -703,8 +703,13 @@ exports[`CategoryTemplate renders correctly 1`] = `
                   className="c30"
                   href="/test_0"
                 >
-                  Read
+                  Read post
                 </a>
+                 
+                <span>
+                  🕒 
+                  1 min read
+                </span>
               </div>
               <div
                 className="c23"
@@ -747,8 +752,13 @@ exports[`CategoryTemplate renders correctly 1`] = `
                   className="c30"
                   href="/test_1"
                 >
-                  Read
+                  Read post
                 </a>
+                 
+                <span>
+                  🕒 
+                  1 min read
+                </span>
               </div>
             </div>
             <div
