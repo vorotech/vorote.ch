@@ -1,18 +1,18 @@
 body {
-    --color-text: #3b6978;
-    --color-background: #eeeeee;
-    --color-primary: #32e0c4;
-    --color-secondary: #3da4ab;
+    --color-text: #283d3b;
+    --color-background: #faf9f9;
+    --color-primary: #c44536;
+    --color-secondary: #772e25;
     --color-gray300: hsl(0deg, 0%, 70%);
     --color-gray500: hsl(0deg, 0%, 50%);
     --color-gray700: hsl(0deg, 0%, 30%);
   }
   
   body.dark {
-    --color-text: #dbedf3;
-    --color-background: #283149;
-    --color-primary: #00818a;
-    --color-secondary: #404b69;
+    --color-text: #faf9f9;
+    --color-background: #22223b;
+    --color-primary: #bee3db;
+    --color-secondary: #9a8c98;
     --color-gray300: hsl(0deg, 0%, 30%);
     --color-gray500: hsl(0deg, 0%, 50%);
     --color-gray700: hsl(0deg, 0%, 70%);
