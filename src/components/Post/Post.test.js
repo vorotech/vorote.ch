@@ -25,6 +25,9 @@ describe('Post', () => {
       fields: {
         slug: '/test',
         categorySlug: '/test-category',
+        readingTime: {
+          text: '1 min read'
+        },
         tagSlugs: [
           '/test_0',
           '/test_1'

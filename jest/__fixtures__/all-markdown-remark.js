@@ -17,7 +17,10 @@ module.exports = {
         node: {
           fields: {
             slug: '/test_0',
-            categorySlug: '/test'
+            categorySlug: '/test',
+            readingTime: {
+              text: '1 min read'
+            }
           },
           frontmatter: {
             date: '2016-09-01',
@@ -31,7 +34,10 @@ module.exports = {
         node: {
           fields: {
             slug: '/test_1',
-            categorySlug: '/test'
+            categorySlug: '/test',
+            readingTime: {
+              text: '1 min read'
+            }
           },
           frontmatter: {
             date: '2016-09-01',

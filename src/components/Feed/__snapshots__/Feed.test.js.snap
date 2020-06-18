@@ -66,6 +66,11 @@ exports[`Feed renders correctly 1`] = `
   border-bottom: 1px solid var(--color-primary);
 }
 
+.c8 {
+  color: var(--color-gray700);
+  margin-left: 5px;
+}
+
 <div>
   <div
     className="c0"
@@ -108,8 +113,14 @@ exports[`Feed renders correctly 1`] = `
       className="c7"
       href="/test_0"
     >
-      Read
+      Read post
     </a>
+    <span
+      className="c8"
+    >
+      🕒 
+      1 min read
+    </span>
   </div>
   <div
     className="c0"
@@ -152,8 +163,14 @@ exports[`Feed renders correctly 1`] = `
       className="c7"
       href="/test_1"
     >
-      Read
+      Read post
     </a>
+    <span
+      className="c8"
+    >
+      🕒 
+      1 min read
+    </span>
   </div>
 </div>
 `;

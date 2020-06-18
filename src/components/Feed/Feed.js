@@ -71,6 +71,11 @@ const ReadMoreLink = styled(Link)`
   }
 `;
 
+const ReadingTime = styled.span`
+  color: var(--color-gray700);
+  margin-left: 5px;
+`;
+
 type Props = {
   edges: Edges
 };
@@ -94,7 +99,10 @@ const Feed = ({ edges }: Props) => (
           <TitleLink to={edge.node.fields.slug}>{edge.node.frontmatter.title}</TitleLink>
         </Title>
         <Description>{edge.node.frontmatter.description}</Description>
-        <ReadMoreLink to={edge.node.fields.slug}>Read</ReadMoreLink>
+        <ReadMoreLink to={edge.node.fields.slug}>Read post</ReadMoreLink>
+        { edge.node.fields.readingTime
+          && <ReadingTime>🕒 {edge.node.fields.readingTime.text}</ReadingTime>
+        }
       </FeedItem>
     ))}
   </div>
