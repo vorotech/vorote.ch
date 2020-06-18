@@ -152,6 +152,10 @@ const GlobalStyles = createGlobalStyle`
     margin-left: -30px !important;
     padding-right: 14px !important;
   }
+
+  .gatsby-highlight {
+    max-width: 90vw;
+  }
 `;
 
 export default GlobalStyles;
