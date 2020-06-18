@@ -110,7 +110,6 @@ exports[`Feed renders correctly 1`] = `
     >
       Read post
     </a>
-     
     <span>
       🕒 
       1 min read
@@ -159,7 +158,6 @@ exports[`Feed renders correctly 1`] = `
     >
       Read post
     </a>
-     
     <span>
       🕒 
       1 min read

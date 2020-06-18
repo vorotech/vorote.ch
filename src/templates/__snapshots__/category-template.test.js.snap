@@ -705,7 +705,6 @@ exports[`CategoryTemplate renders correctly 1`] = `
                 >
                   Read post
                 </a>
-                 
                 <span>
                   🕒 
                   1 min read
@@ -754,7 +753,6 @@ exports[`CategoryTemplate renders correctly 1`] = `
                 >
                   Read post
                 </a>
-                 
                 <span>
                   🕒 
                   1 min read

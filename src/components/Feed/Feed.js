@@ -94,7 +94,10 @@ const Feed = ({ edges }: Props) => (
           <TitleLink to={edge.node.fields.slug}>{edge.node.frontmatter.title}</TitleLink>
         </Title>
         <Description>{edge.node.frontmatter.description}</Description>
-        <ReadMoreLink to={edge.node.fields.slug}>Read post</ReadMoreLink> <span>🕒 {edge.node.fields.readingTime.text}</span>
+        <ReadMoreLink to={edge.node.fields.slug}>Read post</ReadMoreLink>
+        { edge.node.fields.readingTime && 
+          <span>🕒 {edge.node.fields.readingTime.text}</span>
+        }
       </FeedItem>
     ))}
   </div>
