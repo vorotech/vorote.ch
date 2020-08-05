@@ -16,15 +16,15 @@ socialImage: "/media/caspar-camille-rubin-oI6zrBj3nKw-unsplash.jpg"
 TL;DR My personal development goals:
 
 + Share the information that I found useful for self-development.
-+ Highlight infromation related to DevOps and Cloud-native app development.
++ Highlight information related to DevOps and Cloud-native app development.
 + Become a Linux expert (a few years ago, I changed the technology stack from Windows to Linux, but I'm still halfway in this journey).
 + Prove my professional knowledge and competency with certification.
 + Consulting for teams and projects.
 + Automate everything starting with the business processes and ending with the home automation.
-+ Practice my favourite programming languages which are C# (.net core), TypeScript, Python 3 and Go.
++ Practice my favorite programming languages which are C# (.net core), TypeScript, Python 3 and Go.
 + Improve my English and writing skills (my native languages are Ukrainian and Russian).
-+ Practise public speaking.
-+ Participate in intersting and challenging projects. 
++ Practice public speaking.
++ Participate in interesting and challenging projects. 
 
 ## Thoughts...
 

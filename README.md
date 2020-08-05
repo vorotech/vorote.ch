@@ -24,7 +24,8 @@ All blog posts and pages content is licensed under a [Creative Commons Attributi
 ### Access CMS Locally
 
 To test the CMS locally run a production build of the site:
-```
+
+```sh
 $ yarn run serve
 ```
 
@@ -33,7 +34,7 @@ $ yarn run serve
 Navigate into your new site’s directory and start it up.
 
 ```sh
-yarnm run develop
+$ yarn run develop
 ```
 
 ### Open the source code and start editing!
