@@ -1,16 +1,16 @@
 ---
-title: WSL, Kali Linux, Termial Recipe
-date: "2020-06-28T00:00:00.000Z"
+title: WSL 2, Kali Linux, Windows Termial — Part 1
+date: "2020-08-05T00:00:00.000Z"
 template: "post"
 draft: false
-slug: "wsl-kali-linux-terminal-receipe"
+slug: "wsl-2-kali-linux-windows-terminal-part-1"
 category: "Personal Development"
 tags:
   - "WSL2"
   - "Kali Linux"
   - "Windows Terminal"
   - "Guidence"
-description: "Configure Windows Terminal with a PowerShell Core and zshell panels representing Windows 10 and Kali Linux. Make a nice look and user experience with oh-my-posh and Oh My Zsh theme engines. And much more."
+description: "Update to WSL 2. Install Kali Linux distro as a default distro. Configure all packages required for daily usage. Configure virtualenv to manage pip dependencies and make it default Linux subsystem."
 socialImage: "/media/Annotation 2020-07-11 225451.png"
 ---
 
@@ -34,10 +34,6 @@ With the release of the 2004 update of Windows 10 I decided to extend my usage o
   * Configure virtualenv to manage pip dependencies
   * Sharing SSH keys from Windows
 * Delete Ubuntu-18.04 distro once all settings migrated
-* Configure Windows Terminal with a PowerShell Core and zshell panels representing Windows 10 and Kali Linux
-* Make a nice look and user experience with oh-my-posh and Oh My Zsh theme engines
-* Configure VS Code to open projects with WSL 2
-* Configure Docker to integrate with WSL 2
 
 ## Install WSL 2
 
@@ -287,7 +283,7 @@ $ ln -sf /mnt/c/Users/${WIN_USER}/.ssh/id_rsa.pub ${HOME}/.ssh/id_rsa.pub
 
 Option 2 (my choice), set `identityFile` inside the `~/.ssh/config`:
 
-```txt
+```
 Host * 
     IdentityFile /mnt/c/Users/${WIN_USER}/.ssh/id_rsa
 ```
@@ -315,87 +311,8 @@ So don't forget to copy any important files if you have them stored elsewhere in
 $ wsl --unregister Ubuntu-18.04
 ```
 
-## Install and setup Windows Terminal
+<hr>
 
-https://docs.microsoft.com/en-us/windows/terminal/get-started
+Thanks for reading. Stay tuned for Part 2 where I'll share how to configure Windows Terminal with a PowerShell Core and zshell panels representing Windows 10 and Kali Linux, make a nicer look and user experience with oh-my-posh and Oh My Zsh theme engines, and much more.
 
-
-
-
-
-Customize Terminal
-`Ctrl+,`
-
-Get Windows Terminal color schemas of your choice 
-https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal
-
-Add to schemes array any themes you like:
-
-```json
-{
-    "schemes": [
-        {
-        "name": "AdventureTime",
-        "black": "#050404",
-        "red": "#bd0013",
-        "green": "#4ab118",
-        "yellow": "#e7741e",
-        "blue": "#0f4ac6",
-        "purple": "#665993",
-        "cyan": "#70a598",
-        "white": "#f8dcc0",
-        "brightBlack": "#4e7cbf",
-        "brightRed": "#fc5f5a",
-        "brightGreen": "#9eff6e",
-        "brightYellow": "#efc11a",
-        "brightBlue": "#1997c6",
-        "brightPurple": "#9b5953",
-        "brightCyan": "#c8faf4",
-        "brightWhite": "#f6f5fb",
-        "background": "#1f1d45",
-        "foreground": "#f8dcc0"
-        }
-    ]
-}
-
-```
-
-Customise profile to use the new color scheme:
-
-```
-{
-    "profiles": [
-        {
-            "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
-            "hidden": false,
-            "name": "kali-linux",
-            "source": "Windows.Terminal.Wsl",
-            "fontFace": "Cascadia Mono PL",
-            "colorScheme": "AdventureTime"
-        }
-    ]
-}
-```
-
-Tip: Set `hidden: true` for any profile that you want to hide from Terminal Menu.
-
-The Font Face with embedded Powerline symbols which I use in the Terminal can be downloaded here.
-
-https://docs.microsoft.com/en-us/windows/terminal/cascadia-code
-https://github.com/microsoft/cascadia-code
-
-Install the Font https://dev.to/expertsinside/cascadia-code-a-new-font-for-visual-studio-code-and-terminal-47oc
-
-
-Background images
-https://github.com/dorianpro/kali-linux-wallpapers
-https://github.com/ryoid/PowerShell-Core-Wallpaper
-
-
-Customize WSL
-
-
-https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
-
-
-https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
+See ya!

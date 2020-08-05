@@ -52,7 +52,7 @@ In my case it was the `Memory Compression` process with a `pagefile.sys` file. L
 
 In the Windows Command Shell (**cmd**) execute the following:
 
-```cmd
+```
 D:\>dir /a:h
  Volume in drive D is Backup.
  Volume Serial Number is 8B73-54C4

@@ -28,7 +28,7 @@ module.exports = {
   author: {
     name: 'Dmytro Vorotyntsev',
     photo: '/photo.jpg',
-    bio: 'Software Engineer, DevOps Practitioner, Occasional Writer & Speaker.',
+    bio: 'Husband, Father, Software Engineer, DevOps Practitioner, Occasional Writer & Speaker',
     contacts: {
       email: '',
       facebook: '',
