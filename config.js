@@ -21,14 +21,15 @@ module.exports = {
       path: '/pages/about'
     },
     {
-      label: 'Contact me',
-      path: '/pages/contacts'
-    }
+      label: 'Service Agreement',
+      path: '/pages/service-agreement'
+    },
+
   ],
   author: {
     name: 'Dmytro Vorotyntsev',
     photo: '/photo.jpg',
-    bio: 'Husband, Father, Software Engineer, DevOps Practitioner, Occasional Writer & Speaker',
+    bio: 'Husband, Father, Software Engineer, DevOps Consulting, Occasional Writer & Speaker',
     contacts: {
       email: '',
       facebook: '',

@@ -53,7 +53,7 @@ See the list of the available packages for download [here](https://docs.microsof
 
 Since Windows 10 Spring 2018 Update (or later) includes the popular curl command-line utility you can do the following:
 
-```powershell
+```shell
 $ curl.exe -L -o kali.appx https://aka.ms/wsl-kali-linux-new
 $ Add-AppxPackage .\kali.appx
 $ rm .\kali.appx
@@ -80,7 +80,7 @@ BUG_REPORT_URL="https://bugs.kali.org/"
 
 You can check all your distros in PowerShell:
 
-```powershell
+```shell
 $  wsl -l -v
   NAME                   STATE           VERSION
 * kali-linux             Running         2
@@ -97,19 +97,19 @@ $ wsl --set-default-version 2
 
 Run the following command in PowerShell to convert existing distro to WSL 2:
 
-```powershell
+```shell
 $ wsl --set-version Ubuntu-18.04 2
 ```
 
 Run the following command in PowerShell to change default distribution:
 
-```powershell
+```shell
 $ wsl --set-default kali-linux
 ```
 
 To open other distribution from the PowerShell you can run:
 
-```powershell
+```shell
 $ wsl -d Ubuntu-18.04
 ```
 
@@ -134,14 +134,14 @@ Tried once and I never come back to using a `choco` again.
 
 Scoop Installation (PowerShell)
 
-```powershell
+```shell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 ```
 
 My minimal packages list:
 
-```powershell
+```shell
 $ scoop list
 Installed apps:
 
