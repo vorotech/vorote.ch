@@ -34,11 +34,11 @@ My blog will often touch on the topic of DevOps Transformation, the process by w
 My personal DevOps transformation has started while working at Just Eat company (at present Just Eat Takeway.com).
 I always was interested in operational side of things, how the application runs in the live environment, how to make it scalable and fault tolerant, how to decrease a time from code to production.
 Back in 2016, my transition was from the Software Engineering role (member of a team developing new features) to the Platform Engineering role (member of the team continuously delivering a product for internal consumers).
-At that moment I realised that now I see the usual things from several angles. And I liked it.
+At that moment I realized that now I see the usual things from several angles. And I liked it.
 
 From that moment I do not feel like just a developer, I continue trying new tools and technologies, and new challenges do not scare me.
 
-But need to remember that the business is not interested in what a cool engineering solution or new technology you used in your previous project if this won't be useful. Moreover, the business perceives only real indicators, such as an increase in the speed of development, deployment, rollback, fault tolerance, recovery from failures, a decrease in the response speed of services, an optimal architecture,  immutability, high availability, scalability, and optimisation of the cost of infrastructure.
+But need to remember that the business is not interested in what a cool engineering solution or new technology you used in your previous project if this won't be useful. Moreover, the business perceives only real indicators, such as an increase in the speed of development, deployment, rollback, fault tolerance, recovery from failures, a decrease in the response speed of services, an optimal architecture,  immutability, high availability, scalability, and optimization of the cost of infrastructure.
 
 > If it wasn't hard, everyone would do it. It's the hard that makes it great.
 >

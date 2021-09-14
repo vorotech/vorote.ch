@@ -1,5 +1,5 @@
 ---
-title: WSL 2, Kali Linux, Windows Termial — Part 1
+title: WSL 2, Kali Linux, Windows Terminal — Part 1
 date: "2020-08-05T00:00:00.000Z"
 template: "post"
 draft: false
@@ -9,7 +9,7 @@ tags:
   - "WSL2"
   - "Kali Linux"
   - "Windows Terminal"
-  - "Guidence"
+  - "Guidance"
 description: "Update to WSL 2. Install Kali Linux distro as a default distro. Configure all packages required for daily usage. Configure virtualenv to manage pip dependencies and make it default Linux subsystem."
 socialImage: "/media/Annotation 2020-07-11 225451.png"
 ---
@@ -19,7 +19,7 @@ _Windows Terminal with PowerShell (left) and Kali Linux (right) shells_
 
 During this year my work OS is Windows 10 Pro. I haven't decided yet weather I want to switch to other OS.
 Our team still support couple of the full .NET Framework components requiring Windows 10 and also
-a daily work with Ansible and Python 3. Thus Windows Subsytem for Linux (WSL) running Ubuntu 18.04 
+a daily work with Ansible and Python 3. Thus Windows Subsystem for Linux (WSL) running Ubuntu 18.04 
 was a real salvation before I configured Kali Linux.
 
 <hr>
@@ -53,7 +53,7 @@ See the list of the available packages for download [here](https://docs.microsof
 
 Since Windows 10 Spring 2018 Update (or later) includes the popular curl command-line utility you can do the following:
 
-```shell
+```sh
 $ curl.exe -L -o kali.appx https://aka.ms/wsl-kali-linux-new
 $ Add-AppxPackage .\kali.appx
 $ rm .\kali.appx
@@ -63,7 +63,7 @@ Once the distribution is installed, find it in the Start menu and proceed creati
 
 When finished check the distribution version installed:
 
-```shell
+```sh
 $ cat /etc/os-release
 PRETTY_NAME="Kali GNU/Linux Rolling"
 NAME="Kali GNU/Linux"
@@ -80,7 +80,7 @@ BUG_REPORT_URL="https://bugs.kali.org/"
 
 You can check all your distros in PowerShell:
 
-```shell
+```sh
 $  wsl -l -v
   NAME                   STATE           VERSION
 * kali-linux             Running         2
@@ -91,25 +91,25 @@ $  wsl -l -v
 
 Run the following command in PowerShell to set WSL 2 as the default version when installing a new Linux distribution:
 
-```pwoeshell
+```powershell
 $ wsl --set-default-version 2
 ```
 
 Run the following command in PowerShell to convert existing distro to WSL 2:
 
-```shell
+```sh
 $ wsl --set-version Ubuntu-18.04 2
 ```
 
 Run the following command in PowerShell to change default distribution:
 
-```shell
+```sh
 $ wsl --set-default kali-linux
 ```
 
 To open other distribution from the PowerShell you can run:
 
-```shell
+```sh
 $ wsl -d Ubuntu-18.04
 ```
 
@@ -134,14 +134,14 @@ Tried once and I never come back to using a `choco` again.
 
 Scoop Installation (PowerShell)
 
-```shell
+```sh
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 ```
 
 My minimal packages list:
 
-```shell
+```sh
 $ scoop list
 Installed apps:
 
@@ -169,14 +169,14 @@ but I'd not blame Scoop here 🤣
 I was always lacking a visibility over the installed packages and their dependencies while working with Linux before. 
 This is no longer an issue after I found out about the [Aptitude](https://wiki.debian.org/Aptitude), command-line based front-end to numerous Apt libraries.
 
-```shell
+```sh
 $ sudo apt-get update -y
 $ sudo apt-get install -y aptitude
 ```
 
 Once **aptitude** installed get the following packages (my minimal setup) with their dependencies installed as well:
 
-```
+```sh
 git
 docker
 golang-go
@@ -193,7 +193,7 @@ htop
 
 Btw, to get the list of packages installed by Aptitude (or Apt) not including their dependencies, you can run:
 
-```shell
+```sh
 $ aptitude search '~i!~M'
 ```
 
@@ -211,13 +211,13 @@ making it easier to work on more than one project at a time without introducing 
 
 Get started with it in few simple steps:
 
-```shell
+```sh
 $ pip install virtualenvwrapper
 ```
 
 After installed edit your `.bashrc` or `.zshrc` or any other and add the following lines to the end:
 
-```shell
+```sh
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -227,7 +227,7 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 
 You might need to add the `$HOME/.local/bin` to the `$PATH`, so find where the `PATH` is exported. You should have something similar to:
 
-```shell
+```sh
 $ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 ```
 
@@ -238,7 +238,7 @@ project specific setups, but common as well (e.g. `ansible` environment might ha
 
 Now, let's give it a try. Assume we need to setup new environment with the Ansible and some dependencies:
 
-```shell
+```sh
 $ cd /your-projects-space
 $ workon ansible
 ERROR: Environment 'ansible' does not exist. Create it with 'mkvirtualenv ansible'.
@@ -269,28 +269,28 @@ the generated keys can be shared in couple of ways.
 
 If keys hasn't been generated yet:
 
-```shell
+```sh
 $ export WIN_USER=replace
 $ ssh-keygen -f /mnt/c/Users/${WIN_USER}/.ssh/id_rsa -b 4096
 ```
 
 Option 1, create symlinks:
 
-```shell
+```sh
 $ ln -sf /mnt/c/Users/${WIN_USER}/.ssh/id_rsa ${HOME}/.ssh/id_rsa
 $ ln -sf /mnt/c/Users/${WIN_USER}/.ssh/id_rsa.pub ${HOME}/.ssh/id_rsa.pub
 ```
 
 Option 2 (my choice), set `identityFile` inside the `~/.ssh/config`:
 
-```
+```sh
 Host * 
     IdentityFile /mnt/c/Users/${WIN_USER}/.ssh/id_rsa
 ```
 
 In case you see the `WARNING: UNPROTECTED PRIVATE KEY FILE!` you need to fix the permissions of the SSH keys:
 
-```shell
+```sh
 $ chmod 600 /mnt/c/Users/${WIN_USER}/.ssh/id_rsa
 $ chmod 644 /mnt/c/Users/${WIN_USER}/.ssh/id_rsa.pub
 $ chmod 700 /mnt/c/Users/${WIN_USER}/.ssh
@@ -307,7 +307,7 @@ While Linux distributions can be installed through the Microsoft store, they can
 Caution: Once unregistered, all data, settings, and software associated with that distribution will be permanently lost. 
 So don't forget to copy any important files if you have them stored elsewhere in Linux Subsystem.
 
-```shell
+```sh
 $ wsl --unregister Ubuntu-18.04
 ```
 

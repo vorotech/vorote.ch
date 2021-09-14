@@ -8,7 +8,7 @@ category: "Troubleshooting"
 tags:
   - "Windows Administration"
   - "Troubleshooting"
-description: "My home Windows 10 PC is running really slow. Let's find out what's going on. I'm going to share the troubleshooting approach that might be helpfull."
+description: "My home Windows 10 PC is running really slow. Let's find out what's going on. I'm going to share the troubleshooting approach that might be helpful."
 socialImage: "/media/denny-muller-1qL31aacAPA-unsplash.jpg"
 ---
 ![Photo by Denny Müller on Unsplash](/media/denny-muller-1qL31aacAPA-unsplash.jpg)

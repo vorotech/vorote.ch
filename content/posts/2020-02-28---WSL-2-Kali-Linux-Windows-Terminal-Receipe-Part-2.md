@@ -1,15 +1,15 @@
 ---
-title: WSL 2, Kali Linux, Windows Termial — Part 2
+title: WSL 2, Kali Linux, Windows Terminal — Part 2
 date: "2020-08-05T00:00:00.000Z"
 template: "post"
 draft: true
-slug: "wsl-2-kali-linux-winfows-terminal-part-2"
+slug: "wsl-2-kali-linux-windows-terminal-part-2"
 category: "Personal Development"
 tags:
   - "WSL2"
   - "Kali Linux"
   - "Windows Terminal"
-  - "Guidence"
+  - "Guidance"
 description: "Configure Windows Terminal with a PowerShell Core and zshell panels representing Windows 10 and Kali Linux. Make a nice look and user experience with oh-my-posh and Oh My Zsh theme engines. And much more."
 socialImage: "/media/Annotation 2020-07-11 225451.png"
 ---
@@ -74,9 +74,9 @@ Add to schemes array any themes you like:
 
 ```
 
-Customise profile to use the new color scheme:
+Customize profile to use the new color scheme:
 
-```
+```json
 {
     "profiles": [
         {

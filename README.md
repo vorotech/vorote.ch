@@ -47,7 +47,7 @@ Open the `blog` directory in your code editor of choice and edit `src/templates/
 
 ### Folder Structure
 
-```
+```sh
 └── content
     ├── pages
     └── posts
