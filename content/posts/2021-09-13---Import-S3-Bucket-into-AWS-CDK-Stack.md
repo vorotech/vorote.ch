@@ -258,3 +258,9 @@ Personally I'm not a fan of the CloudFormation stack template format, I think th
 On the other hand the AWS CDK that operates the CloudFormation stack and allowing to define infrastructure constructs in code with the language of your choice is a real game changer.
 
 See ya!
+
+References:
+
+- [Source Code at GitHub](https://github.com/vorotech/cdk-import-s3)
+- [AWS Cloud Development Kit (AWS CDK)](https://github.com/aws/aws-cdk) 
+- [Import Existing Resources into a CloudFormation Stack](https://aws.amazon.com/blogs/aws/new-import-existing-resources-into-a-cloudformation-stack/)
