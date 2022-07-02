@@ -5,6 +5,7 @@ import * as types from "./internal/gatsby/types";
 
 export default {
   pathPrefix: config.pathPrefix,
+  trailingSlash: 'always',
   siteMetadata: {
     url: config.url,
     menu: config.menu,
@@ -55,16 +56,19 @@ export default {
                 ...node.frontmatter,
                 date: node?.frontmatter?.date,
                 description: node?.frontmatter?.description,
-                url: site.siteMetadata.url + node?.fields?.slug,
-                guid: site.siteMetadata.url + node?.fields?.slug,
+                url:
+                  site.siteMetadata.url +
+                  (node.frontmatter?.slug || node.fields?.slug),
+                guid:
+                  site.siteMetadata.url +
+                  (node.frontmatter?.slug || node.fields?.slug),
                 custom_elements: [{ "content:encoded": node.html }],
               })),
-            query: `
-              {
+              query: `{
                 allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+                  limit: 1000
+                  sort: {frontmatter: {date: DESC}}
+                  filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
                 ) {
                   edges {
                     node {
@@ -75,13 +79,13 @@ export default {
                       frontmatter {
                         date
                         title
+                        slug
                         description
                       }
                     }
                   }
                 }
-              }
-            `,
+              }`,
             output: "/rss.xml",
             title: config.title,
           },
@@ -113,15 +117,15 @@ export default {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-plugin-google-gtag",
-      options: {
-        trackingIds: [config.googleAnalyticsId],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-gtag",
+    //   options: {
+    //     trackingIds: [config.googleAnalyticsId],
+    //     pluginConfig: {
+    //       head: true,
+    //     },
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
@@ -152,7 +156,7 @@ export default {
         short_name: config.title,
         theme_color: "hsl(31, 92%, 62%)",
         background_color: "hsl(0, 0%, 100%)",
-        icon: "content/photo.jpg",
+        icon: "content/icon.png",
         display: "standalone",
         start_url: "/",
       },
@@ -192,7 +196,6 @@ export default {
     },
     "gatsby-plugin-image",
     "gatsby-plugin-catch-links",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-optimize-svgs",
     "gatsby-plugin-sass",
   ],

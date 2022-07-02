@@ -1,17 +1,37 @@
 import React from "react";
-import renderer from "react-test-renderer";
+
+import {
+  render as reactTestingLibraryRender,
+  screen,
+} from "@testing-library/react";
 
 import { Tags } from "@/components/Post/Tags";
 import * as mocks from "@/mocks";
+import { testUtils } from "@/utils";
 
 describe("Tags", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = {
       tags: mocks.markdownRemark.frontmatter.tags,
       tagSlugs: mocks.markdownRemark.fields.tagsSlugs,
     };
 
-    const tree = renderer.create(<Tags {...props} />).toJSON();
+    const tree = testUtils
+      .createSnapshotsRenderer(<Tags {...props} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  test("buttons is rendered correctly and exists", () => {
+    const props = {
+      tags: mocks.markdownRemark.frontmatter.tags,
+      tagSlugs: mocks.markdownRemark.fields.tagsSlugs,
+    };
+
+    reactTestingLibraryRender(<Tags {...props} />);
+
+    props.tags.forEach((tag) => {
+      expect(screen.getByText(tag)).toBeInTheDocument();
+    });
   });
 });

@@ -1,9 +1,9 @@
 {
-  "title": "Blog by John Doe",
-  "url": "https://lumen.alxshelepenok.com",
-  "subtitle": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+  "title": "Blog by vorotech",
+  "url": "https://vorote.ch",
+  "subtitle": "Platform Engineer Thoughts",
   "copyright": "© All rights reserved.",
-  "googleAnalyticsId": "UA-73379983-2",
+  "googleAnalyticsId": "",
   "disqusShortname": "",
   "postsLimit": 4,
   "pathPrefix": "/",
@@ -15,32 +15,29 @@
     {
       "label": "About me",
       "path": "/pages/about"
-    },
-    {
-      "label": "Contact me",
-      "path": "/pages/contacts"
     }
   ],
   "author": {
-    "name": "John Doe",
+    "name": "vorotech",
     "photo": "/photo.jpg",
-    "bio": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "bio": "Platform Engineer and Crypto Enthusiast",
     "contacts": {
       "rss": "",
       "email": "",
-      "github": "#",
-      "facebook": "#",
-      "telegram": "#",
-      "twitter": "#",
-      "linkedin": "#",
-      "instagram": "#",
+      "github": "vorotech",
+      "facebook": "",
+      "telegram": "dmytro_ops",
+      "twitter": "vorotech",
+      "linkedin": "",
+      "instagram": "",
       "line": "",
       "weibo": "",
       "gitlab": "",
       "medium": "",
       "youtube": "",
       "codepen": "",
-      "soundcloud": ""
+      "soundcloud": "",
+      "mastodon": ""
     }
   }
 }

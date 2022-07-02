@@ -1,10 +1,12 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
+import { screen } from "@testing-library/react";
 import { StaticQuery, useStaticQuery } from "gatsby";
 
 import { Post } from "@/components/Post";
 import * as mocks from "@/mocks";
+import { testUtils } from "@/utils";
+import { renderWithCoilProvider } from "@/utils/test-utils";
 
 const mockedStaticQuery = StaticQuery as jest.Mock;
 const mockedUseStaticQuery = useStaticQuery as jest.Mock;
@@ -17,9 +19,17 @@ describe("Post", () => {
     mockedUseStaticQuery.mockReturnValue(mocks.siteMetadata);
   });
 
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = { post: mocks.markdownRemark };
-    const tree = renderer.create(<Post {...props} />).toJSON();
+    const tree = testUtils
+      .createSnapshotsRenderer(<Post {...props} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  test("buttons is rendered correctly and exists", () => {
+    const props = { post: mocks.markdownRemark };
+    renderWithCoilProvider(<Post {...props} />);
+    expect(screen.getByText("All Articles")).toBeInTheDocument();
   });
 });

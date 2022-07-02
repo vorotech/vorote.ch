@@ -1,5 +1,7 @@
 import React from "react";
 
+import { atob } from "abab";
+
 import { Icon } from "@/components/Icon";
 import { ICONS } from "@/constants";
 import { Dictionary } from "@/types";
@@ -17,14 +19,26 @@ const Contacts: React.FC<Props> = ({ contacts }: Props) => (
       {(Object.keys(contacts) as Array<keyof typeof ICONS>).map((name) =>
         contacts[name] ? (
           <li className={styles.item} key={name}>
-            <a
-              className={styles.link}
-              href={getContactHref(name, contacts[name])}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Icon name={name} icon={getIcon(name)} />
-            </a>
+            {name === "email" ? (
+              <span
+                className={styles.link}
+                onClick={() => {
+                  window.location.href =
+                    "mailto:" + atob(getContactHref(name, contacts[name]));
+                }}
+              >
+                <Icon name={name} icon={getIcon(name)} />
+              </span>
+            ) : (
+              <a
+                className={styles.link}
+                href={getContactHref(name, contacts[name])}
+                target="_blank"
+                rel={`noopener noreferrer${name === "mastodon" ? " me" : ""}`}
+              >
+                <Icon name={name} icon={getIcon(name)} />
+              </a>
+            )}
           </li>
         ) : null,
       )}

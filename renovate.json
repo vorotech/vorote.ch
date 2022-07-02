@@ -3,8 +3,6 @@
     "config:base",
     ":automergePatch",
     ":automergeBranch",
-    ":automergePatch",
-    ":automergeBranch",
     ":automergeLinters",
     ":automergeTesters",
     ":automergeTypes"
@@ -25,6 +23,11 @@
     {
       "packageNames": ["react", "react-dom", "react-test-renderer"],
       "groupName": "react"
+    },
+    {
+      "groupName": "node",
+      "matchPackageNames": ["node"],
+      "enabled": false
     }
   ],
   "labels": ["renovate"],

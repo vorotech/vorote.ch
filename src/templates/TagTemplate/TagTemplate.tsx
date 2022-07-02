@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 
 import { Feed } from "@/components/Feed";
 import { Layout } from "@/components/Layout";
+import { Meta } from "@/components/Meta";
 import { Page } from "@/components/Page";
 import { Pagination } from "@/components/Pagination";
 import { Sidebar } from "@/components/Sidebar";
@@ -18,20 +19,12 @@ interface Props {
 }
 
 const TagTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-
   const { group, pagination } = pageContext;
-  const { currentPage, prevPagePath, nextPagePath, hasPrevPage, hasNextPage } =
-    pagination;
-
+  const { prevPagePath, nextPagePath, hasPrevPage, hasNextPage } = pagination;
   const { edges } = data.allMarkdownRemark;
-  const pageTitle =
-    currentPage > 0
-      ? `${group} - Page ${currentPage} - ${siteTitle}`
-      : `${group} - ${siteTitle}`;
 
   return (
-    <Layout title={pageTitle} description={siteSubtitle}>
+    <Layout>
       <Sidebar />
       <Page title={group}>
         <Feed edges={edges} />
@@ -46,42 +39,49 @@ const TagTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
   );
 };
 
-export const query = graphql`
-  query TagTemplate($group: String, $limit: Int!, $offset: Int!) {
-    site {
-      siteMetadata {
-        title
-        subtitle
-      }
+export const query = graphql`query TagTemplate($group: String, $limit: Int!, $offset: Int!) {
+  site {
+    siteMetadata {
+      title
+      subtitle
     }
-    allMarkdownRemark(
-      limit: $limit
-      skip: $offset
-      filter: {
-        frontmatter: {
-          tags: { in: [$group] }
-          template: { eq: "post" }
-          draft: { ne: true }
+  }
+  allMarkdownRemark(
+    limit: $limit
+    skip: $offset
+    filter: {frontmatter: {tags: {in: [$group]}, template: {eq: "post"}, draft: {ne: true}}}
+    sort: {frontmatter: {date: DESC}}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          categorySlug
         }
-      }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            categorySlug
-          }
-          frontmatter {
-            title
-            date
-            category
-            description
-          }
+        frontmatter {
+          title
+          date
+          category
+          description
+          slug
         }
       }
     }
   }
-`;
+}`;
+
+export const Head: React.FC<Props> = ({ pageContext }) => {
+  const { title, subtitle } = useSiteMetadata();
+
+  const {
+    group,
+    pagination: { currentPage: page },
+  } = pageContext;
+
+  const pageTitle =
+    page > 0 ? `${group} - Page ${page} - ${title}` : `${group} - ${title}`;
+
+  return <Meta title={pageTitle} description={subtitle} />;
+};
 
 export default TagTemplate;

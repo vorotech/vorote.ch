@@ -1,13 +1,23 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
 import { Copyright } from "@/components/Sidebar/Copyright";
 import * as mocks from "@/mocks";
+import { testUtils } from "@/utils";
 
 describe("Copyright", () => {
-  it("renders correctly", () => {
+  test("renders correctly", () => {
     const props = { copyright: mocks.siteMetadata.site.siteMetadata.copyright };
-    const tree = renderer.create(<Copyright {...props} />).toJSON();
+    const tree = testUtils
+      .createSnapshotsRenderer(<Copyright {...props} />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("renders correctly with empty string", () => {
+    const props = { copyright: "" };
+    const tree = testUtils
+      .createSnapshotsRenderer(<Copyright {...props} />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
