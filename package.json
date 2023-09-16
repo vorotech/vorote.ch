@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-lumen",
-  "version": "1.4.1014",
-  "description": "A constantly evolving and thoughtful architecture for creating static blogs with Gatsby",
+  "name": "vorotech-blog",
+  "version": "2.0",
+  "description": "Blog by vorotech build with Gatsby based on gatsby-starter-lumen",
   "keywords": [
     "gatsby",
     "graphql",
@@ -10,10 +10,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alxshelepenok/gatsby-starter-lumen.git"
+    "url": "https://github.com/vorotech/vorote.ch.git"
   },
   "license": "MIT",
-  "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
   "scripts": {
     "build": "npm run clean && gatsby build",
     "clean": "rimraf .cache public",
