@@ -1,10 +1,10 @@
 ---
 title: "About me"
 template: "page"
-socialImage: "/deepmind-lISkvdgfLEk-unsplash.jpeg"
+socialImage: "./media/deepmind-lISkvdgfLEk-unsplash.jpeg"
 ---
 
-![Photo by DeepMind on Unsplash](/deepmind-lISkvdgfLEk-unsplash.jpeg)
+![Photo by DeepMind on Unsplash](./media/deepmind-lISkvdgfLEk-unsplash.jpeg)
   
 Hello, I'm Dmytro, and I'm delighted to welcome you to my personal blog.
 

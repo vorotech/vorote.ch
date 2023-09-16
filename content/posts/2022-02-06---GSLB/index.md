@@ -2,7 +2,7 @@
 title: Global Server Load Balancing
 date: "2022-02-06T22:40:32.169Z"
 template: "post"
-draft: false
+draft: true
 slug: "/posts/global-server-load-balancing-gslb"
 category: "Engineering"
 tags:
