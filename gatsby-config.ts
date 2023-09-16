@@ -198,5 +198,13 @@ export default {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-optimize-svgs",
     "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: process.env.BLOG_S3_BUCKET,
+        protocol: "https",
+        hostname: process.env.BLOG_HOSTNAME,
+      },
+    },
   ],
 };
