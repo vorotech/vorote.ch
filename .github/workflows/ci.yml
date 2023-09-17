@@ -99,6 +99,9 @@ jobs:
         run: npm ci
 
       - name: Run build
+        env:
+          BLOG_S3_BUCKET: ${{ secrets.BLOG_S3_BUCKET }}
+          BLOG_HOSTNAME: ${{ secrets.BLOG_HOSTNAME }}
         run: npm run build
 
   lint:
