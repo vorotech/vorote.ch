@@ -39,36 +39,44 @@ const TagTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
   );
 };
 
-export const query = graphql`query TagTemplate($group: String, $limit: Int!, $offset: Int!) {
-  site {
-    siteMetadata {
-      title
-      subtitle
+export const query = graphql`
+  query TagTemplate($group: String, $limit: Int!, $offset: Int!) {
+    site {
+      siteMetadata {
+        title
+        subtitle
+      }
     }
-  }
-  allMarkdownRemark(
-    limit: $limit
-    skip: $offset
-    filter: {frontmatter: {tags: {in: [$group]}, template: {eq: "post"}, draft: {ne: true}}}
-    sort: {frontmatter: {date: DESC}}
-  ) {
-    edges {
-      node {
-        fields {
-          slug
-          categorySlug
+    allMarkdownRemark(
+      limit: $limit
+      skip: $offset
+      filter: {
+        frontmatter: {
+          tags: { in: [$group] }
+          template: { eq: "post" }
+          draft: { ne: true }
         }
-        frontmatter {
-          title
-          date
-          category
-          description
-          slug
+      }
+      sort: { frontmatter: { date: DESC } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            categorySlug
+          }
+          frontmatter {
+            title
+            date
+            category
+            description
+            slug
+          }
         }
       }
     }
   }
-}`;
+`;
 
 export const Head: React.FC<Props> = ({ pageContext }) => {
   const { title, subtitle } = useSiteMetadata();

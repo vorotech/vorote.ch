@@ -5,7 +5,7 @@ import * as types from "./internal/gatsby/types";
 
 export default {
   pathPrefix: config.pathPrefix,
-  trailingSlash: 'always',
+  trailingSlash: "always",
   siteMetadata: {
     url: config.url,
     menu: config.menu,
@@ -64,7 +64,7 @@ export default {
                   (node.frontmatter?.slug || node.fields?.slug),
                 custom_elements: [{ "content:encoded": node.html }],
               })),
-              query: `{
+            query: `{
                 allMarkdownRemark(
                   limit: 1000
                   sort: {frontmatter: {date: DESC}}

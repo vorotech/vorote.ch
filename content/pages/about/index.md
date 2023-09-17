@@ -5,7 +5,7 @@ socialImage: "./media/deepmind-lISkvdgfLEk-unsplash.jpeg"
 ---
 
 ![Photo by DeepMind on Unsplash](./media/deepmind-lISkvdgfLEk-unsplash.jpeg)
-  
+
 Hello, I'm Dmytro, and I'm delighted to welcome you to my personal blog.
 
 Staying in demand as a specialist has always been my driving force. It means continually expanding my skill set to bring value to the companies I work with. My journey has been marked by a relentless pursuit of growth, learning from experienced specialists, taking on complex tasks, and setting new goals. I aspire to apply my knowledge to make a meaningful impact in a dynamic work environment.
@@ -17,6 +17,7 @@ My own DevOps transformation began in 2016 when I transitioned from a Software E
 ## Personal Development Goals
 
 My goals include:
+
 - Sharing valuable self-development insights.
 - Spotlighting DevOps and Cloud-native app development.
 - Mastering Linux (a journey I began a few years ago).
