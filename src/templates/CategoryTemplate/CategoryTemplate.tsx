@@ -40,30 +40,38 @@ const CategoryTemplate: React.FC<Props> = ({ data, pageContext }: Props) => {
   );
 };
 
-export const query = graphql`query CategoryTemplate($group: String, $limit: Int!, $offset: Int!) {
-  allMarkdownRemark(
-    limit: $limit
-    skip: $offset
-    filter: {frontmatter: {category: {eq: $group}, template: {eq: "post"}, draft: {ne: true}}}
-    sort: {frontmatter: {date: DESC}}
-  ) {
-    edges {
-      node {
-        fields {
-          slug
-          categorySlug
+export const query = graphql`
+  query CategoryTemplate($group: String, $limit: Int!, $offset: Int!) {
+    allMarkdownRemark(
+      limit: $limit
+      skip: $offset
+      filter: {
+        frontmatter: {
+          category: { eq: $group }
+          template: { eq: "post" }
+          draft: { ne: true }
         }
-        frontmatter {
-          description
-          category
-          title
-          date
-          slug
+      }
+      sort: { frontmatter: { date: DESC } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            categorySlug
+          }
+          frontmatter {
+            description
+            category
+            title
+            date
+            slug
+          }
         }
       }
     }
   }
-}`;
+`;
 
 export const Head: React.FC<Props> = ({ pageContext }) => {
   const { title, subtitle } = useSiteMetadata();

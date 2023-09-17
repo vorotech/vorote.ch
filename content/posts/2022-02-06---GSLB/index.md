@@ -11,6 +11,7 @@ tags:
 description: "Global server load balancing (GSLB) is a method of distributing Internet traffic to a network of servers across the globe, creating a faster and more reliable user experience."
 socialImage: "./media/deepmind-LIlsk-UFVxk-unsplash.jpeg"
 ---
+
 ![Photo by DeepMind on Unsplash](/media/deepmind-LIlsk-UFVxk-unsplash.jpeg)
 
 - [What is GSLB?](#what-is-gslb)
