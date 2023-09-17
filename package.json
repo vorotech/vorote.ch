@@ -33,11 +33,6 @@
     "test:watch": "jest --watch --config ./internal/testing/jest-config.ts",
     "deploy": "npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "lint-staged": {
     "*.tsx?": [
       "npm run format:ts"
