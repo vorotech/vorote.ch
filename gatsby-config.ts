@@ -202,6 +202,7 @@ export default {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: process.env.BLOG_S3_BUCKET,
+        acl: null,
         protocol: "https",
         hostname: process.env.BLOG_HOSTNAME,
       },
