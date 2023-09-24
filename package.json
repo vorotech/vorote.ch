@@ -146,6 +146,11 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
+  "overrides": {
+    "react": "$react",
+    "@types/react": "$@types/react",
+    "react-dom": "$react-dom"
+  },
   "engines": {
     "node": ">=18"
   }
