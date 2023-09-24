@@ -4,8 +4,7 @@ import config from "./content/config.json";
 import * as types from "./internal/gatsby/types";
 
 import * as dotenv from "dotenv";
-
-dotenv.config({ path: `${__dirname}/.env.${process.env.NODE_ENV}` });
+dotenv.config({ path: path.resolve(`.env.${process.env.NODE_ENV}`) });
 
 export default {
   pathPrefix: config.pathPrefix,
