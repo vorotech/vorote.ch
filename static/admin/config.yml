@@ -3,6 +3,10 @@ backend:
   repo: vorotech/vorote.ch
   branch: main
 
+# All unpublished entries will be arranged in a board according to their status,
+# and they can be further reviewed and edited before going live.
+publish_mode: editorial_workflow
+
 commit_messages:
   create: "Create {{collection}} “{{slug}}”"
   update: "Update {{collection}} “{{slug}}”"
