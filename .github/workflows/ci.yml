@@ -41,7 +41,7 @@ jobs:
 
       - name: Install modules
         if: steps.npm-modules-cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm ci --force
 
   validate:
     name: Validate
