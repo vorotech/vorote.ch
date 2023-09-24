@@ -10,7 +10,7 @@ tags:
   - "Typography"
   - "Web Development"
 description: "An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts."
-socialImage: "./media/42-line-bible.jpg"
+socialImage: "/assets/42-line-bible.jpg"
 ---
 
 - [The first transition](#the-first-transition)
@@ -30,7 +30,7 @@ A similar conflict emerged after the invention of the first printing press in Eu
 
 The first printed books were, at first, perceived as inferior to the handwritten ones. They were smaller and cheaper to produce. Movable type provided the printers with flexibility that allowed them to print books in languages other than Latin. Gill describes the transition to industrialism as something that people needed and wanted. Something similar happened after the first printed books emerged. People wanted books in a language they understood and they wanted books they could take with them. They were hungry for knowledge and printed books satisfied this hunger.
 
-![42-line-bible.jpg](/media/42-line-bible.jpg)
+![42-line-bible.jpg](/assets/42-line-bible.jpg)
 
 _The 42–Line Bible, printed by Gutenberg._
 
@@ -67,7 +67,7 @@ Typefaces don’t look handmade these days. And that’s all right. They don’t
 
 We’ve come close to “perfection” in the last five centuries. The letters are crisp and without rough edges. We print our compositions with high–precision printers on a high quality, machine made paper.
 
-![type-through-time.jpg](/media/type-through-time.jpg)
+![type-through-time.jpg](/assets/type-through-time.jpg)
 
 _Type through 5 centuries._
 

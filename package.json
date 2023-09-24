@@ -16,6 +16,7 @@
   "scripts": {
     "build": "npm run clean && gatsby build",
     "clean": "rimraf .cache public",
+    "cms": "npx netlify-cms-proxy-server",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
     "format:ts": "eslint \"src\" --ext .tsx,.ts --fix && prettier --write .",
@@ -31,7 +32,7 @@
     "test": "TZ=UTC jest --config ./internal/testing/jest-config.ts",
     "test:update-snapshot": "jest --updateSnapshot --config ./internal/testing/jest-config.ts",
     "test:watch": "jest --watch --config ./internal/testing/jest-config.ts",
-    "deploy": "npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy"
+    "deploy": "npm run build && gatsby-plugin-s3 deploy"
   },
   "lint-staged": {
     "*.tsx?": [
@@ -48,6 +49,7 @@
     "@sentry/tracing": "^7.69.0",
     "abab": "^2.0.6",
     "classnames": "^2.3.2",
+    "decap-cms-app": "^3.0.7",
     "disqus-react": "^1.1.5",
     "gatsby": "^5.12.4",
     "gatsby-link": "^5.12.0",
@@ -56,6 +58,7 @@
     "gatsby-plugin-google-gtag": "^5.12.0",
     "gatsby-plugin-image": "^3.12.0",
     "gatsby-plugin-manifest": "^5.12.0",
+    "gatsby-plugin-netlify-cms": "^7.12.0",
     "gatsby-plugin-offline": "^6.12.0",
     "gatsby-plugin-optimize-svgs": "^1.0.5",
     "gatsby-plugin-s3": "^0.4.1",
@@ -68,6 +71,7 @@
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^7.12.0",
     "gatsby-remark-prismjs": "^7.12.0",
+    "gatsby-remark-relative-images": "^2.0.5",
     "gatsby-remark-responsive-iframe": "^6.12.0",
     "gatsby-remark-smartypants": "^6.12.0",
     "gatsby-script": "^2.12.0",
@@ -141,6 +145,11 @@
     "stylelint-scss": "^5.2.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "overrides": {
+    "react": "$react",
+    "@types/react": "$@types/react",
+    "react-dom": "$react-dom"
   },
   "engines": {
     "node": ">=18"
