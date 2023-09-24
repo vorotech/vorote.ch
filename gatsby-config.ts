@@ -3,6 +3,10 @@ import path from "path";
 import config from "./content/config.json";
 import * as types from "./internal/gatsby/types";
 
+import * as dotenv from "dotenv";
+
+dotenv.config({ path: `${__dirname}/.env.${process.env.NODE_ENV}` });
+
 export default {
   pathPrefix: config.pathPrefix,
   trailingSlash: "always",
@@ -17,6 +21,13 @@ export default {
     disqusShortname: config.disqusShortname,
   },
   plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/static/assets`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -92,10 +103,21 @@ export default {
         ],
       },
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          // gatsby-remark-relative-images must go before gatsby-remark-images
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              // [Optional] The root of "media_folder" in your config.yml
+              // Defaults to "static"
+              staticFolderName: "static",
+            },
+          },
           {
             resolve: "gatsby-remark-images",
             options: {
@@ -115,8 +137,7 @@ export default {
         ],
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    "gatsby-plugin-netlify-cms",
     // {
     //   resolve: "gatsby-plugin-google-gtag",
     //   options: {
