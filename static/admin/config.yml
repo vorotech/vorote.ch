@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: vorotech/vorote.ch
+  branch: main
+
+# All unpublished entries will be arranged in a board according to their status,
+# and they can be further reviewed and edited before going live.
+publish_mode: editorial_workflow
+
+commit_messages:
+  create: "Create {{collection}} “{{slug}}”"
+  update: "Update {{collection}} “{{slug}}”"
+  delete: "Delete {{collection}} “{{slug}}”"
+  uploadMedia: "[skip ci] Upload “{{path}}”"
+  deleteMedia: "[skip ci] Delete “{{path}}”"
+
+local_backend: true
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}---{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    path: "{{title}}/index"
+    preview_path: posts/{{slug}}
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Template",
+          name: "template",
+          widget: "hidden",
+          default: "post",
+        }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "string",
+          default: "Platform Engineering",
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Image", name: "socialImage", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
