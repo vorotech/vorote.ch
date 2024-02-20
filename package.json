@@ -1,6 +1,6 @@
 {
   "name": "vorotech-blog",
-  "version": "2.2.9",
+  "version": "2.2.10",
   "description": "Blog by vorotech build with Gatsby based on gatsby-starter-lumen",
   "keywords": [
     "gatsby",
@@ -51,7 +51,7 @@
     "classnames": "^2.3.2",
     "decap-cms-app": "^3.0.7",
     "disqus-react": "^1.1.5",
-    "gatsby": "^5.12.4",
+    "gatsby": "^5.13.1",
     "gatsby-link": "^5.12.0",
     "gatsby-plugin-catch-links": "^5.12.0",
     "gatsby-plugin-feed": "^5.12.0",
