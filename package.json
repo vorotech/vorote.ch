@@ -1,6 +1,6 @@
 {
   "name": "vorotech-blog",
-  "version": "2.2.9",
+  "version": "2.2.15",
   "description": "Blog by vorotech build with Gatsby based on gatsby-starter-lumen",
   "keywords": [
     "gatsby",
@@ -51,7 +51,7 @@
     "classnames": "^2.3.2",
     "decap-cms-app": "^3.0.7",
     "disqus-react": "^1.1.5",
-    "gatsby": "^5.12.4",
+    "gatsby": "^5.13.1",
     "gatsby-link": "^5.12.0",
     "gatsby-plugin-catch-links": "^5.12.0",
     "gatsby-plugin-feed": "^5.12.0",
@@ -131,7 +131,7 @@
     "lint-staged": "^14.0.1",
     "lost": "9.0.2",
     "postcss": "^8.4.31",
-    "postcss-scss": "^4.0.8",
+    "postcss-scss": "^4.0.9",
     "prettier": "^3.0.3",
     "prettier-plugin-packagejson": "^2.4.5",
     "react-test-renderer": "^18.2.0",
