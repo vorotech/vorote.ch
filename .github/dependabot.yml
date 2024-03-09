@@ -19,6 +19,10 @@ updates:
         update-types:
         - "minor"
         - "patch"
+    ignore:
+      # For all packages, ignore all patch updates
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
 
   - package-ecosystem: "github-actions"
     directory: "/"

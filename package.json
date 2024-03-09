@@ -29,7 +29,7 @@
     "semantic-release": "semantic-release",
     "serve": "gatsby serve",
     "start": "npm run clean && gatsby develop",
-    "test": "TZ=UTC jest --config ./internal/testing/jest-config.ts",
+    "test": "cross-env TZ=UTC jest --config ./internal/testing/jest-config.ts",
     "test:update-snapshot": "jest --updateSnapshot --config ./internal/testing/jest-config.ts",
     "test:watch": "jest --watch --config ./internal/testing/jest-config.ts",
     "deploy": "npm run build && gatsby-plugin-s3 deploy"
@@ -108,6 +108,7 @@
     "codecov": "^3.8.3",
     "concurrently": "^8.2.1",
     "conventional-changelog-conventionalcommits": "7.0.2",
+    "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
