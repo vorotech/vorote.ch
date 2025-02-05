@@ -105,7 +105,6 @@
     "@typescript-eslint/parser": "^6.7.2",
     "autoprefixer": "^10.4.15",
     "browserslist": "^4.21.11",
-    "codecov": "^3.8.3",
     "concurrently": "^8.2.1",
     "conventional-changelog-conventionalcommits": "7.0.2",
     "cross-env": "^7.0.3",
