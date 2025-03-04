@@ -10,5 +10,8 @@ WORKDIR /workspace
 # Install Gatsby CLI globally for convenience
 RUN npm install -g gatsby-cli
 
+# Install commitlint globally for convenience
+RUN npm install -g @commitlint/cli
+
 # Set correct user
 USER node
