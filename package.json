@@ -1,6 +1,6 @@
 {
   "name": "vorotech-blog",
-  "version": "2.2.36",
+  "version": "2.2.38",
   "description": "Blog by vorotech build with Gatsby based on gatsby-starter-lumen",
   "keywords": [
     "gatsby",
@@ -75,7 +75,7 @@
     "gatsby-remark-responsive-iframe": "^6.12.0",
     "gatsby-remark-smartypants": "^6.12.0",
     "gatsby-script": "^2.12.0",
-    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-remark": "^6.12.0",
     "gatsby-transformer-sharp": "^5.13.1",
     "prismjs": "^1.29.0",
